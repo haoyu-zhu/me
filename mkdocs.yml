@@ -1,1 +1,4 @@
 site_name: My Docs
+site_url: https://haoyu-zhu.github.io/me/
+theme:
+  name: material
