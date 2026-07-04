@@ -1,21 +1,63 @@
 site_name: 抓鱼的编辑部
 site_url: https://haoyu-zhu.github.io/me/
-nav:
-  - 首页: index.md
-  - 第一部分:
-      - Part1/index.md
-  - 第二部分:
-      - Part2/index.md
-  - 第三部分:
-      - Part3/index.md
 docs_dir: docs/
 
 theme:
   name: material
+  custom_dir: overrides
+  language: zh
+  favicon: assets/favicon.png
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: 切换暗色模式
+    - scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: 切换亮色模式
+  font:
+    text: Noto Serif SC
+    code: JetBrains Mono
   features:
     - navigation.tabs
-    - search.suggest
-    - search.highlight
-    - search.share
-    - navigation.top
+    - navigation.sections
     - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+
+# 关闭搜索（默认的 search 插件），顶栏不再出现搜索框
+plugins: []
+
+nav:
+  - home:
+    - index.md
+    - 关于我: about/index.md
+    - 播客: podcast/index.md
+  - AI: thinking/ai/index.md
+  - 书·影·画:
+    - 书: life/books/index.md
+    - 电影: life/movies/index.md
+    - 画画: life/art/index.md
+  - 旅行: life/travel/index.md
+  - 美食: life/food/index.md
+  - 笔记:
+    - thinking/index.md
+    - 金融: thinking/finance/index.md
+  - 研究: thinking/research/index.md
+  - 数据分析: thinking/data/index.md
+  - 留学: life/study-abroad/index.md
+  - 摄影: life/photography/index.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/haoyu-zhu
