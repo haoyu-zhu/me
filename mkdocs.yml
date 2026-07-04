@@ -38,7 +38,6 @@ nav:
   - home:
     - index.md
     - 关于我: about/index.md
-    - 播客: podcast/index.md
   - AI:
     - thinking/ai/index.md
     - Vibe Coding 产品:
@@ -75,14 +74,47 @@ nav:
     - 寻味肇庆: life/travel/zhaoqing.md
     - 台北: life/travel/taipei.md
     - 马六甲-吉隆坡大巴游: life/travel/malacca-kl.md
-  - 美食: life/food/index.md
+  - 美食:
+    - life/food/index.md
+    - 广东: life/food/guangdong.md
+    - 湖南: life/food/hunan.md
+    - 江西: life/food/jiangxi.md
+    - 新加坡: life/food/singapore.md
   - 笔记:
     - thinking/index.md
-    - 金融: thinking/finance/index.md
-  - 研究: thinking/research/index.md
-  - 数据分析: thinking/data/index.md
-  - 留学: life/study-abroad/index.md
-  - 摄影: life/photography/index.md
+    - 产品经理:
+      - AI 产品经理: thinking/pm/ai.md
+      - 硬件产品经理: thinking/pm/hardware.md
+    - 强化学习: thinking/rl.md
+    - 自动化:
+      - 自动控制原理: thinking/control/classical.md
+      - 现代控制原理: thinking/control/modern.md
+    - 其他:
+      - 看财报: thinking/finance/index.md
+  - 研究:
+    - thinking/research/index.md
+    - RL for OR: thinking/research/rl-for-or.md
+  - 数据分析:
+    - thinking/data/index.md
+    - 国民经济研究:
+      - 国民经济基本情况: thinking/data/macro/overview.md
+      - 灵活就业比例挖掘: thinking/data/macro/flexible-employment.md
+      - 主流企业招聘规模变化: thinking/data/macro/hiring-scale.md
+      - 主流企业雇员收入相对毛利占比: thinking/data/macro/income-vs-margin.md
+    - 财报分析:
+      - 小米: thinking/data/financial/xiaomi.md
+  - 留学:
+    - life/study-abroad/index.md
+    - 申请:
+      - 择校: life/study-abroad/apply/school-selection.md
+      - 雅思: life/study-abroad/apply/ielts.md
+      - 资料准备: life/study-abroad/apply/materials.md
+    - 留学见闻: life/study-abroad/experience.md
+  - 摄影:
+    - life/photography/index.md
+    - 深圳: life/photography/shenzhen.md
+    - 新加坡: life/photography/singapore.md
+    - 台北: life/photography/taipei.md
 
 extra_css:
   - stylesheets/extra.css
