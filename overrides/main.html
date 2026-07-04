@@ -50,6 +50,7 @@
 {#-- 左侧个人栏（替换默认导航树 + 目录） --#}
 {% block site_nav %}
   {% set is_home = page and (page.is_homepage or page.url in ['', '.', './']) %}
+  {% set cur = page.url if page else '' %}
   {% if is_home %}
   {#-- 首页：个人信息栏 --#}
   <aside class="site-rail">
@@ -75,6 +76,35 @@
         <span><a href="https://www.hnu.edu.cn/" target="_blank" rel="noopener">湖南大学</a> → <a href="https://www.nus.edu.sg/" target="_blank" rel="noopener">NUS</a></span>
       </li>
     </ul>
+  </aside>
+  {% elif cur.startswith('thinking/ai/') %}
+  {#-- AI 栏目：分组可折叠目录 --#}
+  {% set ai_dir = [
+    {"group":"Vibe Coding 产品", "pages":[
+      {"name":"招聘管理系统", "link":"thinking/ai/vibe-coding/recruitment/"}
+    ]},
+    {"group":"Skills", "pages":[
+      {"name":"财报分析", "link":"thinking/ai/skills/financial-analysis/"},
+      {"name":"市场调研", "link":"thinking/ai/skills/market-research/"},
+      {"name":"竞品分析", "link":"thinking/ai/skills/competitor-analysis/"}
+    ]}
+  ] %}
+  <aside class="site-rail site-rail--toc">
+    <div class="site-toc-title"><a class="dir-home" href="{{ base_url }}/thinking/ai/">AI</a></div>
+    <nav class="ai-dir">
+      {% for g in ai_dir %}
+      {% set ns = namespace(open=false) %}
+      {% for it in g.pages %}{% if cur == it.link %}{% set ns.open = true %}{% endif %}{% endfor %}
+      <details class="ai-group"{% if ns.open %} open{% endif %}>
+        <summary>{{ g.group }}</summary>
+        <ul>
+          {% for it in g.pages %}
+          <li><a href="{{ base_url }}/{{ it.link }}"{% if cur == it.link %} class="active"{% endif %}>{{ it.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+      {% endfor %}
+    </nav>
   </aside>
   {% else %}
   {#-- 其他页面：本页目录 --#}

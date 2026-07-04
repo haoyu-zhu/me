@@ -39,7 +39,14 @@ nav:
     - index.md
     - 关于我: about/index.md
     - 播客: podcast/index.md
-  - AI: thinking/ai/index.md
+  - AI:
+    - thinking/ai/index.md
+    - Vibe Coding 产品:
+      - 招聘管理系统: thinking/ai/vibe-coding/recruitment/index.md
+    - Skills:
+      - 财报分析: thinking/ai/skills/financial-analysis/index.md
+      - 市场调研: thinking/ai/skills/market-research/index.md
+      - 竞品分析: thinking/ai/skills/competitor-analysis/index.md
   - 书·影·画:
     - 书: life/books/index.md
     - 电影: life/movies/index.md
