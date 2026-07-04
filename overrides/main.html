@@ -106,6 +106,80 @@
       {% endfor %}
     </nav>
   </aside>
+  {% elif cur.startswith('life/books/') or cur.startswith('life/movies/') or cur.startswith('life/art/') %}
+  {#-- 书·电影·绘画 栏目：三大分组可折叠目录 --#}
+  {% set bha_dir = [
+    {"group":"书", "home":"life/books/", "pages":[
+      {"name":"总览", "link":"life/books/"},
+      {"name":"年度最佳", "link":"life/books/best/"},
+      {"name":"中国", "link":"life/books/china/"},
+      {"name":"法国", "link":"life/books/france/"},
+      {"name":"英国", "link":"life/books/uk/"},
+      {"name":"美国", "link":"life/books/usa/"}
+    ]},
+    {"group":"电影", "home":"life/movies/", "pages":[
+      {"name":"总览", "link":"life/movies/"},
+      {"name":"年度最佳", "link":"life/movies/best/"},
+      {"name":"中国", "link":"life/movies/china/"},
+      {"name":"美国", "link":"life/movies/usa/"},
+      {"name":"欧洲", "link":"life/movies/europe/"},
+      {"name":"日本", "link":"life/movies/japan/"}
+    ]},
+    {"group":"绘画", "home":"life/art/", "pages":[
+      {"name":"总览", "link":"life/art/"},
+      {"name":"我的素描", "link":"life/art/sketch/"},
+      {"name":"印象", "link":"life/art/impression/"}
+    ]}
+  ] %}
+  <aside class="site-rail site-rail--toc">
+    <div class="site-toc-title"><a class="dir-home" href="{{ base_url }}/life/books/">书 · 电影 · 绘画</a></div>
+    <nav class="ai-dir">
+      {% for g in bha_dir %}
+      {% set ns = namespace(open=false) %}
+      {% for it in g.pages %}{% if cur == it.link %}{% set ns.open = true %}{% endif %}{% endfor %}
+      <details class="ai-group"{% if ns.open %} open{% endif %}>
+        <summary>{{ g.group }}</summary>
+        <ul>
+          {% for it in g.pages %}
+          <li><a href="{{ base_url }}/{{ it.link }}"{% if cur == it.link %} class="active"{% endif %}>{{ it.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+      {% endfor %}
+    </nav>
+  </aside>
+  {% elif cur.startswith('life/travel/') %}
+  {#-- 旅行 栏目：国内 / 国外 两大分组可折叠目录 --#}
+  {% set trip_dir = [
+    {"group":"国内", "pages":[
+      {"name":"环西南省会", "link":"life/travel/southwest/"},
+      {"name":"武汉", "link":"life/travel/wuhan/"},
+      {"name":"寻味顺德", "link":"life/travel/shunde/"},
+      {"name":"寻味江门", "link":"life/travel/jiangmen/"},
+      {"name":"寻味肇庆", "link":"life/travel/zhaoqing/"},
+      {"name":"台北", "link":"life/travel/taipei/"}
+    ]},
+    {"group":"国外", "pages":[
+      {"name":"马六甲 - 吉隆坡大巴游", "link":"life/travel/malacca-kl/"}
+    ]}
+  ] %}
+  <aside class="site-rail site-rail--toc">
+    <div class="site-toc-title"><a class="dir-home" href="{{ base_url }}/life/travel/">旅行</a></div>
+    <nav class="ai-dir">
+      {% for g in trip_dir %}
+      {% set ns = namespace(open=false) %}
+      {% for it in g.pages %}{% if cur == it.link %}{% set ns.open = true %}{% endif %}{% endfor %}
+      <details class="ai-group"{% if ns.open or cur == 'life/travel/' %} open{% endif %}>
+        <summary>{{ g.group }}</summary>
+        <ul>
+          {% for it in g.pages %}
+          <li><a href="{{ base_url }}/{{ it.link }}"{% if cur == it.link %} class="active"{% endif %}>{{ it.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+      {% endfor %}
+    </nav>
+  </aside>
   {% else %}
   {#-- 其他页面：本页目录 --#}
   <aside class="site-rail site-rail--toc">

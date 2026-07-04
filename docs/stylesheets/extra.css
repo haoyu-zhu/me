@@ -49,9 +49,9 @@ body {
 /* ---------- 顶部标签栏 ---------- */
 .site-top { flex-shrink: 0; background: var(--home-card-bg); }
 .site-top-inner {
-  max-width: 1340px;
+  max-width: 1520px;
   margin: 0 auto;
-  padding: 0.95rem 2rem;
+  padding: 1.3rem 2.4rem;
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -104,25 +104,25 @@ body {
 .md-main { flex: 1; min-height: 0; overflow: hidden; }
 .md-main__inner {
   box-sizing: border-box;
-  max-width: 1340px;
+  max-width: 1520px;
   margin: 0 auto;
   height: 100%;
-  padding: 1.4rem 2rem;
+  padding: 1.8rem 2.4rem;
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
+  grid-template-columns: 240px 1fr;
+  gap: 2.4rem;
 }
 
 /* 左栏个人信息 */
 .site-rail {
   align-self: stretch;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-bottom: 1rem;
 }
 .site-rail .avatar {
   position: relative;
   width: 100%;
-  max-width: 180px;
   aspect-ratio: 1 / 1;
   border-radius: 16px;
   overflow: hidden;
@@ -136,20 +136,20 @@ body {
   font-size: 2.4rem; color: rgba(255,255,255,0.92); letter-spacing: 0.15em;
 }
 /* 左栏竖排联系方式 */
-.p-links { list-style: none; margin: 1rem 0 0; padding: 0; }
+.p-links { list-style: none; margin: 1.4rem 0 0; padding: 0; }
 .p-links > li > a,
 .p-links > li > .p-static,
 .p-links li.edu-row {
-  display: flex; align-items: center; gap: 0.6rem;
-  padding: 0.4rem 0.45rem;
-  font-size: 0.88rem; color: var(--home-ink);
+  display: flex; align-items: center; gap: 0.65rem;
+  padding: 0.55rem 0.5rem;
+  font-size: 0.9rem; color: var(--home-ink);
   text-decoration: none; border-radius: 9px;
   transition: background 0.18s, color 0.18s;
 }
 .p-links > li > a:hover { background: #f5f4f0; color: var(--home-accent); }
 [data-md-color-scheme="slate"] .p-links > li > a:hover { background: rgba(255,255,255,0.06); }
 .p-links svg { width: 19px; height: 19px; color: var(--home-muted); flex-shrink: 0; }
-.p-links .p-mail { font-size: 0.78rem; letter-spacing: -0.01em; line-height: 1.35; }
+.p-links .p-mail { font-size: 0.82rem; letter-spacing: -0.01em; line-height: 1.35; word-break: break-all; min-width: 0; }
 .p-links li.edu-row > span { line-height: 1.4; }
 .p-links li.edu-row a { color: var(--home-accent); text-decoration: none; }
 .p-links li.edu-row a:hover { text-decoration: underline; }
@@ -218,6 +218,17 @@ body {
   font-weight: 700; border-left-color: var(--home-accent);
 }
 
+/* 细滚动条：内容区/左栏溢出时不出现粗大的系统滚动条 */
+.md-content, .site-rail {
+  scrollbar-width: thin;
+  scrollbar-color: var(--home-line) transparent;
+}
+.md-content::-webkit-scrollbar, .site-rail::-webkit-scrollbar { width: 6px; height: 6px; }
+.md-content::-webkit-scrollbar-thumb, .site-rail::-webkit-scrollbar-thumb {
+  background: var(--home-line); border-radius: 6px;
+}
+.md-content::-webkit-scrollbar-track, .site-rail::-webkit-scrollbar-track { background: transparent; }
+
 /* 右栏内容（各页 Markdown 渲染区，带边框，仅此处滚动） */
 .md-content {
   overflow-y: auto;
@@ -267,6 +278,65 @@ body {
 .mini:hover { box-shadow: 0 10px 30px rgba(28,40,80,0.09); transform: translateY(-2px); }
 .mini b { display: block; font-size: 0.95rem; color: var(--home-ink); margin-bottom: 0.3rem; }
 .mini span { font-size: 0.78rem; color: var(--home-muted); }
+
+/* ---------- 书 / 电影：媒体卡片 ---------- */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+.media-card {
+  display: flex; gap: 0.9rem;
+  border: 1px solid var(--home-line); border-radius: 13px;
+  padding: 0.9rem; background: var(--home-card-bg);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.media-card:hover { box-shadow: 0 10px 30px rgba(28,40,80,0.09); transform: translateY(-2px); }
+.media-cover {
+  flex-shrink: 0; width: 62px; height: 88px;
+  border-radius: 7px; overflow: hidden; object-fit: cover;
+  background: linear-gradient(135deg, #d9c3a0, var(--home-accent));
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.9); font-size: 0.7rem; text-align: center;
+}
+.media-body { min-width: 0; }
+.media-body h3 { margin: 0 0 0.2rem; font-size: 0.98rem; }
+.media-meta { font-size: 0.76rem; color: var(--home-muted); margin-bottom: 0.35rem; }
+.media-rating { color: var(--home-accent); font-size: 0.82rem; letter-spacing: 0.08em; margin-bottom: 0.35rem; }
+.media-note { font-size: 0.82rem; color: var(--home-ink); line-height: 1.7; margin: 0; }
+
+/* ---------- 绘画：作品画廊 ---------- */
+.art-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+.art-piece {
+  margin: 0; border: 1px solid var(--home-line); border-radius: 12px;
+  overflow: hidden; background: var(--home-card-bg);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.art-piece:hover { box-shadow: 0 10px 30px rgba(28,40,80,0.09); transform: translateY(-2px); }
+.art-piece img { width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; }
+.art-piece figcaption { padding: 0.6rem 0.8rem; font-size: 0.8rem; color: var(--home-muted); }
+
+/* ---------- 旅行：行程信息条 ---------- */
+.trip-meta {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem;
+  margin: 1.2rem 0 0.4rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--home-line);
+  border-radius: 11px;
+  background: var(--home-accent-soft);
+  font-size: 0.84rem;
+}
+.trip-meta span { color: var(--home-ink); }
+.trip-meta b {
+  color: var(--home-muted); font-weight: 700;
+  font-size: 0.78rem; margin-right: 0.45rem;
+}
 
 /* ---------- 窄屏：恢复正常滚动、上下堆叠 ---------- */
 @media (max-width: 900px) {

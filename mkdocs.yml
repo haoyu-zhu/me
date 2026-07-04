@@ -48,10 +48,33 @@ nav:
       - 市场调研: thinking/ai/skills/market-research/index.md
       - 竞品分析: thinking/ai/skills/competitor-analysis/index.md
   - 书·影·画:
-    - 书: life/books/index.md
-    - 电影: life/movies/index.md
-    - 画画: life/art/index.md
-  - 旅行: life/travel/index.md
+    - 书:
+      - life/books/index.md
+      - 年度最佳: life/books/best.md
+      - 中国: life/books/china.md
+      - 法国: life/books/france.md
+      - 英国: life/books/uk.md
+      - 美国: life/books/usa.md
+    - 电影:
+      - life/movies/index.md
+      - 年度最佳: life/movies/best.md
+      - 中国: life/movies/china.md
+      - 美国: life/movies/usa.md
+      - 欧洲: life/movies/europe.md
+      - 日本: life/movies/japan.md
+    - 画画:
+      - life/art/index.md
+      - 我的素描: life/art/sketch.md
+      - 印象: life/art/impression.md
+  - 旅行:
+    - life/travel/index.md
+    - 环西南省会: life/travel/southwest.md
+    - 武汉: life/travel/wuhan.md
+    - 寻味顺德: life/travel/shunde.md
+    - 寻味江门: life/travel/jiangmen.md
+    - 寻味肇庆: life/travel/zhaoqing.md
+    - 台北: life/travel/taipei.md
+    - 马六甲-吉隆坡大巴游: life/travel/malacca-kl.md
   - 美食: life/food/index.md
   - 笔记:
     - thinking/index.md
