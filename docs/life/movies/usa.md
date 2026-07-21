@@ -2,22 +2,33 @@
 
 > 好莱坞的造梦机器，和它安静的反面。
 
-从类型片到独立电影——美国银幕上的野心与裂缝。
-
-<!-- 添加条目时复制以下模板：
-<div class="media-grid">
-  <article class="media-card">
-    <div class="media-cover">海报</div>
-    <div class="media-body">
-      <h3>片名</h3>
-      <div class="media-meta">导演 · 年份</div>
-      <div class="media-rating">★★★★★</div>
-      <p class="media-note">一句话感受。</p>
+<div class="best-list">
+  <article class="best-item">
+    <div class="best-year">教父</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/usa/the-godfather.webp" alt="教父" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">死亡诗社</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/usa/dead-poets-society.webp" alt="死亡诗社" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">心灵访客</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/usa/finding-forrester.webp" alt="心灵访客" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">迷失东京</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/usa/lost-in-translation.webp" alt="迷失东京" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
     </div>
   </article>
 </div>
--->
-
----
-
-*内容持续更新中……*

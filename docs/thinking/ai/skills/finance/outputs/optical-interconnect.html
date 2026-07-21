@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 光互连（800G/1.6T 光模块）</title><style>
+:root{--bg:#0f1419;--panel:#1a2129;--panel2:#212b35;--ink:#e6edf3;--muted:#9aa7b4;
+--line:#2d3a47;--accent:#4ea1ff;--green:#3fb950;--amber:#d29922;--red:#f85149;}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.7}
+.wrap{max-width:1040px;margin:0 auto;padding:44px 24px 80px}
+.kicker{color:var(--accent);font-weight:600;letter-spacing:.08em;font-size:13px;text-transform:uppercase}
+h1{font-size:28px;margin:8px 0 6px}.sub{color:var(--muted);font-size:15px}
+.meta{color:var(--muted);font-size:13px;margin-top:6px}
+h2{font-size:21px;margin:42px 0 10px}h2 .tag{display:inline-block;background:var(--accent);
+color:#04121f;font-size:13px;font-weight:700;padding:2px 9px;border-radius:6px;margin-right:10px;vertical-align:middle}
+.map{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.mnode{flex:1;min-width:170px;background:var(--panel2);border:1px solid var(--line);
+border-radius:10px;padding:12px}.mnode.vc{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
+.mnode.veto{opacity:.6}.mnode .pos{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.mnode b{display:block;margin:4px 0}.mnode small{color:var(--muted);font-size:12px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:#cdd9e5}td.score{text-align:center;font-weight:700;font-size:16px}
+.s5{background:rgba(63,185,80,.16);color:#6fdc82}.s4{background:rgba(63,185,80,.09);color:#8fd99c}
+.s3{background:rgba(210,153,34,.14);color:#e3b341}.s2{background:rgba(248,81,73,.15);color:#ff7b72}
+tr.demoted td{opacity:.78}.ok{color:var(--green);font-weight:700}.no{color:var(--red);font-weight:700}.mid{color:var(--muted)}
+details{background:var(--panel);border:1px solid var(--line);border-radius:8px;margin:8px 0;padding:6px 14px}
+summary{cursor:pointer;color:#cdd9e5;font-size:14px;font-weight:600}
+details ul{font-size:13.5px;color:var(--ink)}.src{color:var(--muted);font-size:12px}
+.conf{font-size:11px;padding:1px 7px;border-radius:20px;margin-right:4px}
+.conf.high{background:rgba(63,185,80,.2);color:#6fdc82}.conf.med{background:rgba(210,153,34,.2);color:#e3b341}
+.conf.low{background:rgba(248,81,73,.2);color:#ff7b72}
+.verdict{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.chip{background:rgba(63,185,80,.16);color:#6fdc82;border:1px solid var(--green);
+border-radius:20px;padding:6px 16px;font-weight:600}
+.role{font-size:12px;padding:2px 9px;border-radius:20px}
+.role.core{background:rgba(78,161,255,.2);color:#7cc0ff}.role.offense{background:rgba(210,153,34,.2);color:#e3b341}
+.role.satellite{background:rgba(154,167,180,.2);color:#cdd9e5}
+.tk{color:var(--muted);font-size:12px}
+.note{background:#1f2d3d;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:14px}
+.note .lbl{color:var(--accent);font-weight:700;font-size:12px;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
+.note.crit{background:#2a1719;border-left-color:var(--red)}.note.crit .lbl{color:var(--red)}
+.sources{font-size:13px;color:var(--muted)}.sources a{color:var(--accent);text-decoration:none}
+hr{border:0;border-top:1px solid var(--line);margin:34px 0}
+.foot{color:var(--muted);font-size:13px;margin-top:40px;text-align:center}
+</style></head><body><div class="wrap">
+
+<div class="kicker">产业链投资 · 评分卡</div>
+<h1>AI 光互连（800G/1.6T 光模块）</h1>
+<div class="sub">从光/电芯片到超大规模云厂商/GPU 部署；仅数据中心（datacom），不含低速电信。</div>
+<div class="meta">原型: tech-hardware &nbsp;|&nbsp; 数据截至 2026-06 &nbsp;|&nbsp; 透镜: chokepoint, smile-curve, pricing-power</div>
+<h2><span class="tag">S1</span>产业链地图 &amp; 价值量分布</h2>
+<div class="map">
+<div class="mnode vc"><div class="pos">上游</div><b>电芯片 — 光 DSP / 互连 IP</b><small>DSP + 光芯片合计约占 800G 模块 BOM 的 50-60%</small></div>
+<div class="mnode vc"><div class="pos">上游</div><b>光芯片 — 高速 EML / VCSEL 激光器</b><small>每颗 800G/1.6T 模块的核心器件；在可插拔和 CPO（外置光源）两种架构下都存活</small></div>
+<div class="mnode veto"><div class="pos">上游</div><b>无源光器件（透镜 / MPO / 波分复用）</b><small>BOM 占比小，已商品化</small></div>
+<div class="mnode veto"><div class="pos">中游</div><b>模块封装组装</b><small>收入最大的环节；增值 = 制造良率 + 交付速度溢价</small></div>
+</div>
+<h2><span class="tag">S2</span>四问评分卡</h2>
+<table><thead><tr><th>环节</th><th>Q1 规模/增速</th><th>Q2 竞争结构</th><th>Q3 利润池</th><th>Q4 话语权/护城河</th><th>结论</th></tr></thead><tbody>
+<tr><td><b>电芯片 — 光 DSP / 互连 IP</b></td><td class="score s4">4</td><td class="score s5">5</td><td class="score s5">5</td><td class="score s5">5</td><td><span class="ok">价值捕获</span></td></tr>
+<tr><td><b>光芯片 — 高速 EML / VCSEL 激光器</b></td><td class="score s5">5</td><td class="score s4">4</td><td class="score s4">4</td><td class="score s4">4</td><td><span class="ok">价值捕获</span></td></tr>
+<tr class="demoted"><td><b>无源光器件（透镜 / MPO / 波分复用）</b></td><td class="score s4">4</td><td class="score s2">2</td><td class="score s2">2</td><td class="score s2">2</td><td><span class="no">短板否决</span></td></tr>
+<tr class="demoted"><td><b>模块封装组装</b></td><td class="score s5">5</td><td class="score s3">3</td><td class="score s4">4</td><td class="score s2">2</td><td><span class="no">短板否决</span></td></tr>
+</tbody></table>
+<details><summary>电芯片 — 光 DSP / 互连 IP — 证据</summary>
+<ul><li><b>Q1 规模/增速 = 4</b> <span class="conf med">中</span> DSP 需求随 800G+ 出货增长，24M(2025)→63M(2026)；高速 DSP 的 TAM 小于模块金额，但单模块搭载率高 <span class="src">LightCounting/Cignal AI</span></li><li><b>Q2 竞争结构 = 5</b> <span class="conf high">高</span> Marvell 占光 DSP 约 70%；Broadcom 主导交换 ASIC（约 80%）。高速商用 DSP 近乎双寡头 <span class="src">futurumgroup / bepresearch</span></li><li><b>Q3 利润池 = 5</b> <span class="conf high">高</span> FY26 Q2 财报 <i>(当前: Marvell non-GAAP 毛利率 59.4%；Broadcom 毛利率约 65%，营业利润率 &gt;45% / 中周期: 半导体级、可持续)</i> <span class="src">SEC 10-Q AVGO/MRVL</span></li><li><b>Q4 话语权/护城河 = 5</b> <span class="conf high">高</span> 3nm 设计 + 交换 ASIC 绑定 + 生态，极难复制 <i>护城河: tech-generation, ecosystem, scale</i> <i>侵蚀: LPO 方案把 DSP 从模块中移除，降低单模块搭载率</i> <span class="src">EDN OFC 2025</span></li></ul>
+<div class="note"><span class="lbl">方法笔记</span>Q2 必须从『我会持有哪家公司』的视角打分：双寡头对在位的 Broadcom/Marvell 是 5 分，但对任何想切入的国产新玩家则是 1 分。</div>
+</details>
+<details><summary>光芯片 — 高速 EML / VCSEL 激光器 — 证据</summary>
+<ul><li><b>Q1 规模/增速 = 5</b> <span class="conf high">高</span> 每颗 800G/1.6T 都需要 EML；McKinsey：800G 产能到 2027 年仍短缺需求的 40-60% <span class="src">McKinsey Jun 2025 / mlq.ai</span></li><li><b>Q2 竞争结构 = 4</b> <span class="conf med">中</span> 寡头格局：Coherent、Lumentum、住友、三菱掌握高速 EML；美日主导 <span class="src">mlq.ai / industry</span></li><li><b>Q3 利润池 = 4</b> <span class="conf high">高</span> FY25 财报 <i>(当前: Coherent 毛利率 35%（FY25），Lumentum non-GAAP 毛利率 37.8%（同比 +1000bps） / 中周期: 结构性低于 DSP；受产能受限提振)</i> <span class="src">SEC 8-K COHR/LITE</span></li><li><b>Q4 话语权/护城河 = 4</b> <span class="conf med">中</span> 高速 EML 的外延与良率是真实壁垒；Coherent 的 6 英寸 InP 构成成本护城河 <i>护城河: tech-generation, scale</i> <i>侵蚀: 国产替代在低速端推进（源杰 100G EML 放量）；高速端只是时间问题</i> <span class="src">ainvest / industry</span></li></ul>
+<div class="note"><span class="lbl">方法笔记</span>经 S4 前瞻后该环节的持久性被上调：EML 在可插拔和 CPO 架构中都需要，是唯一能穿越即将到来的架构迁移而存活的环节。</div>
+</details>
+<details><summary>无源光器件（透镜 / MPO / 波分复用） — 证据</summary>
+<ul><li><b>Q1 规模/增速 = 4</b> <span class="conf low">低</span> 随模块增长 <span class="src">industry</span></li><li><b>Q2 竞争结构 = 2</b> <span class="conf med">中</span> 分散，供应商众多 <span class="src">industry</span></li><li><b>Q3 利润池 = 2</b> <span class="conf low">低</span> 商品化无源器件 <i>(当前: 微薄 / 中周期: 微薄)</i> <span class="src">industry</span></li><li><b>Q4 话语权/护城河 = 2</b> <span class="conf med">中</span> 可替代，定价权低 <i>护城河: scale</i> <i>侵蚀: 壁垒低</i> <span class="src">industry</span></li></ul>
+</details>
+<details><summary>模块封装组装 — 证据</summary>
+<ul><li><b>Q1 规模/增速 = 5</b> <span class="conf high">高</span> 800G+ 板块 2025 年约 120 亿美元，同比 +40%；出货 24M→63M(2026) <span class="src">LightCounting / ip-fiber</span></li><li><b>Q2 竞争结构 = 3</b> <span class="conf high">高</span> 中国厂商占据前十中的 7 席；中际旭创（InnoLight）约占 800G 的 35%，但新易盛/Coherent/Lumentum/华工/光迅在争夺；份额可能变动 <span class="src">photoncap / ip-fiber</span></li><li><b>Q3 利润池 = 4</b> <span class="conf high">高</span> 公司 2025 前三季财报 <i>(当前: 新易盛 25 年前三季毛利率 47.25% / 净利率 38.33%；中际旭创毛利率 40.74% / 净利率 30.27% / 中周期: 历史约 20-30% — 组装本质是低毛利苦活；此轮高点由短缺+产品结构驱动)</i> <span class="src">东方财富 / 证券时报</span></li><li><b>Q4 话语权/护城河 = 2</b> <span class="conf high">高</span> 两面挤压；护城河（规模/良率/速度）真实但可复制 <i>护城河: scale, manufacturing-yield</i> <i>侵蚀: CPO 是生存性威胁；上游芯片短缺 + 买方高度集中（NVIDIA/超大规模云厂商）两头挤压</i> <span class="src">mlq.ai / IDTechEx</span></li></ul>
+<div class="note"><span class="lbl">方法笔记</span>本卡最重要的一课：当前利润最高（Q3 高）却因 Q4=2 触发短板否决。别让周期高点的毛利掩盖脆弱的议价能力。当作有纪律的周期交易，而非永续特许经营。</div>
+</details>
+<h2><span class="tag">S3</span>价值捕获环节</h2>
+<div class="verdict"><span class="chip">电芯片 — 光 DSP / 互连 IP</span><span class="chip">光芯片 — 高速 EML / VCSEL 激光器</span></div>
+<h2><span class="tag">S5–S6</span>公司清单</h2>
+<table><thead><tr><th>公司</th><th>环节</th><th>角色</th><th>份额 / 毛利 / 增速</th><th>逻辑</th><th>买入纪律</th><th>风险</th></tr></thead><tbody>
+<tr><td><b>Broadcom</b> <span class="tk">AVGO</span></td><td>DSP / 互连 IP</td><td><span class="role core">核心</span></td><td>交换 ASIC 约 80%，定制 ASIC 约 120 亿美元 / 毛利率约 65%，营业利润率 &gt;45% / 定制 AI ASIC 约 +40%</td><td>掌握 CPO 迁移（Tomahawk 6）+ 交换 ASIC + 定制 ASIC；是驾驭迁移而非被其杀死的公司。</td><td>AI 溢价已反映在股价中；回调买入。AI 资本开支见顶回落 = 重估触发点。</td><td>• AI 资本开支放缓<br>• 多元化基本盘稀释光通信纯度带来的弹性</td></tr>
+<tr><td><b>Marvell</b> <span class="tk">MRVL</span></td><td>DSP / 互连 IP</td><td><span class="role offense">进攻</span></td><td>光 DSP 约 70% / non-GAAP 毛利率 59.4% / 同比 +58%（FY26 Q2）</td><td>更纯粹的光 DSP + 定制 ASIC 高 beta 标的；Celestial AI/Photonic Fabric 布局 CPO。</td><td>关注客户集中度（单一超大云厂商砍单即受伤）；若 LPO 渗透超预期则减仓。</td><td>• 客户集中<br>• 估值偏高<br>• LPO/CPO 对商用 DSP 形态的冲击</td></tr>
+<tr><td><b>Coherent</b> <span class="tk">COHR</span></td><td>EML 激光器</td><td><span class="role core">核心</span></td><td>6 英寸 InP 成本/规模领先者 / 毛利率 35%（由 31% 提升） / 通信业务驱动</td><td>对架构迁移最具韧性的 EML 标的；6 英寸 InP 晶圆相对 Lumentum 的 3 英寸构成成本护城河。</td><td>EML 短缺在产能到位（2027）后缓解 → 高毛利回归。不要在短缺高点追。</td><td>• 毛利率仍远低于 DSP<br>• 业务多元、非纯 EML<br>• 短缺驱动的毛利正常化</td></tr>
+<tr><td><b>源杰科技</b> <span class="tk">688498</span></td><td>EML 激光器</td><td><span class="role satellite">卫星</span></td><td>中国第一、全球第六（3.1%） / 综合毛利率 58%，数据中心毛利率 72% / 数据中心收入 2025H1 +1034%</td><td>国产替代期权；InP 全自主，100G EML 放量，200G 研发中。</td><td>小仓位；估值已被拉高（『超过茅台』）。仅在 200G 上量验证后加仓。地缘政治是双刃剑。</td><td>• 规模微小<br>• 200G 尚未上量<br>• 估值极端<br>• 地缘政治 / 出口风险</td></tr>
+</tbody></table>
+<div class="note crit"><span class="lbl">全链共担风险</span>整条链都押注于超大规模云厂商的 AI 资本开支——一旦资本开支放缓，每个环节会一起被重估；没有避风港。</div>
+<hr><div class="sources"><b>信息来源</b><ul>
+<li><a href="https://www.gminsights.com/industry-analysis/optical-transceiver-market">市场规模与 800G/1.6T 预测 (gminsights)</a></li>
+<li><a href="https://ip-fiber.com/blogs/news/nvidia-orders-surge-innolight-and-eoptolink-dominate-60-of-800g-sfp-optical-modules-supply">中际旭创/新易盛占 NVIDIA 800G 的 60% (ip-fiber)</a></li>
+<li><a href="https://photoncap.net/p/chinese-optical-modules-own-7-of">中国光模块占前十中 7 席，芯片才赚钱 (photoncap)</a></li>
+<li><a href="https://caifuhao2.eastmoney.com/news/20251229205249045449400">中际旭创/新易盛 25 年前三季毛利率 (东方财富)</a></li>
+<li><a href="https://mlq.ai/research/optical-networking/">EML 短缺、CPO/LPO 迁移 (mlq.ai)</a></li>
+<li><a href="https://futurumgroup.com/insights/marvell-q4-fy-2025-reports-27-revenue-growth-ai-custom-chips-drive-momentum/">Marvell 约 70% 光 DSP，FY26 Q2 (futurumgroup)</a></li>
+<li><a href="https://www.ainvest.com/news/lighting-fiber-lumentum-coherent-fabrinet-capitalizing-optical-transceiver-boom-2507/">Lumentum/Coherent EML 毛利与 InP 产能 (ainvest)</a></li>
+<li><a href="https://www.idtechex.com/en/research-report/co-packaged-optics-cpo/1138">CPO 2026-27 落地，Broadcom/Nvidia (IDTechEx)</a></li>
+</ul></div>
+<div class="foot">value-chain-investing · AI 光互连（800G/1.6T 光模块）</div>
+</div></body></html>

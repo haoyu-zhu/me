@@ -1,17 +1,67 @@
-# 电影
+# 年度最佳电影
 
-> 电影是用两小时经历另一种人生。
-
-看过的电影，想聊的画面，以及那些说不清楚但记得住的感觉。按「年度私选」和「产地」把它们摆进不同的片单。
-
-<div class="mini-cards">
-  <a class="mini" href="best/"><b>年度最佳</b><span>这一年最舍不得的片子</span></a>
-  <a class="mini" href="china/"><b>中国</b><span>华语世界的光影</span></a>
-  <a class="mini" href="usa/"><b>美国</b><span>好莱坞与它的反面</span></a>
-  <a class="mini" href="europe/"><b>欧洲</b><span>作者电影的故乡</span></a>
-  <a class="mini" href="japan/"><b>日本</b><span>细腻、克制与物哀</span></a>
+<div class="best-list">
+  <article class="best-item">
+    <div class="best-year">2026</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../assets/movies/2026.webp" alt="美丽人生" onerror="this.remove()"></div>
+      <div class="best-body"><h3>美丽人生</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2025</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../assets/movies/2025.webp" alt="喜宴" onerror="this.remove()"></div>
+      <div class="best-body"><h3>喜宴</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2024</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../assets/movies/2024.webp" alt="坠落的审判" onerror="this.remove()"></div>
+      <div class="best-body"><h3>坠落的审判</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2023</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../assets/movies/2023.jpg" alt="搏击俱乐部" onerror="this.remove()"></div>
+      <div class="best-body"><h3>搏击俱乐部</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2022</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../assets/movies/2022.jpg" alt="热天午后" onerror="this.remove()"></div>
+      <div class="best-body"><h3>热天午后</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2021</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../assets/movies/2021.jpg" alt="拯救姜戈" onerror="this.remove()"></div>
+      <div class="best-body"><h3>拯救姜戈</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2020</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../assets/movies/2020.jpg" alt="大河恋" onerror="this.remove()"></div>
+      <div class="best-body"><h3>大河恋</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2019</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../assets/movies/2019.jpg" alt="心灵访客" onerror="this.remove()"></div>
+      <div class="best-body"><h3>心灵访客</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2018</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../assets/movies/2018.webp" alt="爱在黎明破晓前" onerror="this.remove()"></div>
+      <div class="best-body"><h3>爱在黎明破晓前</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
 </div>
-
----
-
-*从上方卡片或左侧目录进入。内容持续更新中……*

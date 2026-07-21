@@ -41,26 +41,37 @@ nav:
   - AI:
     - thinking/ai/index.md
     - Vibe Coding 产品:
-      - 招聘管理系统: thinking/ai/vibe-coding/recruitment/index.md
+      - 栖木 · AI秋招管理助手: thinking/ai/vibe-coding/recruitment/index.md
     - Skills:
-      - 财报分析: thinking/ai/skills/financial-analysis/index.md
-      - 市场调研: thinking/ai/skills/market-research/index.md
-      - 竞品分析: thinking/ai/skills/competitor-analysis/index.md
+      - 消费电子产品经理:
+        - thinking/ai/skills/consumer-electronics/index.md
+        - 市场调研: thinking/ai/skills/consumer-electronics/market-research.md
+        - 用户需求: thinking/ai/skills/consumer-electronics/user-needs.md
+        - 竞品分析: thinking/ai/skills/consumer-electronics/competitive-analysis.md
+        - 产业链: thinking/ai/skills/consumer-electronics/supply-chain.md
+      - 金融:
+        - thinking/ai/skills/finance/index.md
+        - 公司经营分析:
+          - thinking/ai/skills/finance/company-analysis/index.md
+          - 批量下载财报: thinking/ai/skills/finance/company-analysis/grabber.md
+          - 提取财报经营信息: thinking/ai/skills/finance/company-analysis/data-extraction.md
+          - 解读财报: thinking/ai/skills/finance/company-analysis/interpretation.md
+        - 产业链分析: thinking/ai/skills/finance/value-chain.md
   - 书·影·画:
     - 书:
       - life/books/index.md
-      - 年度最佳: life/books/best.md
       - 中国: life/books/china.md
       - 法国: life/books/france.md
       - 英国: life/books/uk.md
       - 美国: life/books/usa.md
     - 电影:
       - life/movies/index.md
-      - 年度最佳: life/movies/best.md
       - 中国: life/movies/china.md
       - 美国: life/movies/usa.md
       - 欧洲: life/movies/europe.md
       - 日本: life/movies/japan.md
+    - 剧:
+      - life/tv/index.md
     - 画画:
       - life/art/index.md
       - 我的素描: life/art/sketch.md
@@ -84,7 +95,9 @@ nav:
     - thinking/index.md
     - 产品经理:
       - AI 产品经理: thinking/pm/ai.md
-      - 硬件产品经理: thinking/pm/hardware.md
+      - 硬件产品经理:
+        - thinking/pm/hardware/index.md
+        - 市场调研: thinking/pm/hardware/market-research.md
     - 强化学习: thinking/rl.md
     - 自动化:
       - 自动控制原理: thinking/control/classical.md
@@ -93,7 +106,10 @@ nav:
       - 看财报: thinking/finance/index.md
   - 研究:
     - thinking/research/index.md
-    - RL for OR: thinking/research/rl-for-or.md
+    - RL for OR:
+      - thinking/research/rl-for-or/index.md
+      - 路径规划: thinking/research/rl-for-or/path-planning.md
+      - 任务调度: thinking/research/rl-for-or/scheduling.md
   - 数据分析:
     - thinking/data/index.md
     - 国民经济研究:
@@ -105,7 +121,7 @@ nav:
       - 小米: thinking/data/financial/xiaomi.md
   - 留学:
     - life/study-abroad/index.md
-    - 申请:
+    - DIY申请:
       - 择校: life/study-abroad/apply/school-selection.md
       - 雅思: life/study-abroad/apply/ielts.md
       - 资料准备: life/study-abroad/apply/materials.md

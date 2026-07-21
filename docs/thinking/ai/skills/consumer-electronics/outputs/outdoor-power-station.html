@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>户外移动电源（便携储能）｜用户需求与产品分析</title>
+<style>
+  :root{
+    --ink:#16231d; --ink2:#42544c; --muted:#849690; --line:#e8efeb;
+    --bg:#f4f8f6; --card:#ffffff; --accent:#1f9d6b; --accent2:#a7e3c6;
+    --pos:#2e9e6b; --posb:#d8f0e4; --neg:#d94f4f; --negb:#f7dede;
+    --mid:#e6a23c; --midb:#fbedd4; --blue:#3a6ea5; --blueb:#dde9f5;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1020px;margin:0 auto;padding:32px 20px 80px}
+  header.hero{background:linear-gradient(135deg,#12231c 0%,#123528 55%,#12463090 100%),
+    linear-gradient(135deg,#12231c,#0f3d2a);color:#fff;border-radius:18px;padding:34px 34px 28px;
+    box-shadow:0 10px 30px rgba(18,40,30,.2)}
+  header.hero h1{margin:0 0 6px;font-size:26px;letter-spacing:.3px}
+  header.hero .sub{color:#c8e6d7;font-size:13.5px;margin-bottom:18px;line-height:1.55}
+  .spec{display:flex;flex-wrap:wrap;gap:8px 10px}
+  .spec span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+    padding:5px 11px;border-radius:20px;font-size:12.5px;color:#fff}
+  .spec b{color:#a7e3c6}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:24px 26px;margin-top:20px;box-shadow:0 2px 10px rgba(20,40,30,.04)}
+  h2{font-size:19px;margin:0 0 16px;display:flex;align-items:center;gap:11px}
+  h2 .n{background:var(--accent);color:#fff;width:30px;height:30px;border-radius:9px;
+    display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex:none}
+  h3{font-size:15px;margin:22px 0 10px;color:var(--ink);border-left:3px solid var(--accent2);padding-left:9px}
+  p{margin:9px 0;color:var(--ink2)}
+  .lead{font-size:15.5px;color:var(--ink)}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:#f4faf7;color:var(--ink);font-weight:600;font-size:12.5px}
+  tr:last-child td{border-bottom:none}
+  .pill{display:inline-block;padding:1px 8px;border-radius:11px;font-size:11px;font-weight:600;white-space:nowrap}
+  .p-high{background:var(--posb);color:#1c7a4f} .p-mid{background:var(--midb);color:#a76a13}
+  .p-low{background:var(--negb);color:#b13838} .p-guess{background:#eee8f5;color:#6b4fa0}
+  .p-single{background:#fdeede;color:#b5651a;border:1px dashed #e0a36a}
+  .ok{color:var(--pos);font-weight:700} .no{color:var(--neg);font-weight:700} .mid{color:var(--mid);font-weight:700}
+  .stats{display:flex;flex-wrap:wrap;gap:12px;margin:6px 0}
+  .stat{flex:1;min-width:150px;background:linear-gradient(160deg,#f4faf7,#eaf5ef);
+    border:1px solid var(--line);border-radius:13px;padding:14px 16px}
+  .stat b{display:block;font-size:22px;color:var(--accent);line-height:1.1}
+  .stat span{font-size:12px;color:var(--muted)}
+  .bars{margin:6px 0}
+  .bar{margin:7px 0}
+  .bar .lab{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink2);margin-bottom:3px;gap:10px}
+  .bar .track{background:#eef2f0;border-radius:8px;height:14px;overflow:hidden}
+  .bar .fill{height:100%;border-radius:8px}
+  .fill.neg{background:linear-gradient(90deg,#e57373,#d94f4f)}
+  .fill.wt{background:linear-gradient(90deg,#28b57e,#1f9d6b)}
+  .cap{font-size:11.5px;color:var(--muted);margin-top:6px}
+  .warn{background:#fff6f0;border:1px solid #f3d3c2;border-left:4px solid #d98a4f;
+    border-radius:10px;padding:13px 15px;margin:12px 0;font-size:13px;color:#6a4326}
+  .warn b{color:#c26a2a}
+  .keybox{background:#eff8f3;border:1px solid #c6e8d6;border-left:4px solid var(--accent);
+    border-radius:10px;padding:13px 15px;margin:14px 0;font-size:13.5px;color:#1c4f3a}
+  .keybox b{color:var(--accent)}
+  .tos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .to{border:1px solid var(--line);border-radius:11px;padding:13px 15px;background:#fbfdfc}
+  .to .h{font-weight:700;font-size:13.5px;margin-bottom:6px;color:var(--ink)}
+  .to .row{font-size:12.5px;margin:3px 0}
+  .to .g{color:var(--pos)} .to .l{color:var(--neg)} .to .s{color:var(--blue)}
+  .tl{position:relative;margin:8px 0 4px;padding-left:26px}
+  .tl::before{content:"";position:absolute;left:8px;top:4px;bottom:4px;width:2px;background:var(--accent2)}
+  .tl .it{position:relative;margin:0 0 15px}
+  .tl .it::before{content:"";position:absolute;left:-22px;top:4px;width:11px;height:11px;border-radius:50%;
+    background:#fff;border:3px solid var(--accent)}
+  .tl .yr{font-weight:700;color:var(--accent);font-size:13px}
+  .tl .ev{font-size:13px;color:var(--ink)} .tl .why{font-size:12.5px;color:var(--muted)}
+  .tl .it.big::before{background:var(--accent);width:13px;height:13px;left:-23px}
+  .tg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .tcol h4{margin:4px 6px 8px;font-size:13.5px}
+  .tcol.sure h4{color:var(--pos)} .tcol.guess h4{color:#6b4fa0}
+  .ti{background:#fbfdfc;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:7px 0;font-size:12.5px}
+  .ti b{font-size:13px}
+  ul.clean{margin:8px 0;padding-left:18px} ul.clean li{margin:5px 0;color:var(--ink2);font-size:13.5px}
+  .refs{font-size:12px;color:var(--ink2)} .refs div{margin:5px 0;word-break:break-all}
+  .meta-note{font-size:12px;color:var(--muted);margin-top:10px;border-top:1px dashed var(--line);padding-top:10px}
+  @media(max-width:680px){.tos,.tg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>户外移动电源（便携储能）· 用户需求与产品分析</h1>
+  <div class="sub">品类级 · 单品/用户视角 · 范围＝百Wh~数kWh 户外便携储能（露营/自驾/应急），不含充电宝，与阳台储能分开 · 检索 2026-06（价格战中份额季度级易变）</div>
+  <div class="spec">
+    <span>全球 2025 出货 <b>2242 万台</b></span>
+    <span>市场 <b>636 亿元</b></span>
+    <span>CAGR <b>~51%</b></span>
+    <span>中国 <b>218 亿(+48%)</b></span>
+    <span>出海 <b>4 年涨 23 倍</b></span>
+    <span>双雄 <b>EcoFlow · 华宝(电小二/Jackery)</b></span>
+  </div>
+</header>
+
+<!-- 0 摘要 -->
+<section>
+  <h2><span class="n">0</span>摘要与核心结论</h2>
+  <div class="stats">
+    <div class="stat"><b>2242万台</b><span>全球便携储能 2025 出货 [8]</span></div>
+    <div class="stat"><b>636亿元</b><span>2025 全球市场规模 [8]</span></div>
+    <div class="stat"><b>~51%</b><span>2021–2026 CAGR [8]</span></div>
+    <div class="stat"><b>中国主导</b><span>美亚/日亚榜首，出海 4 年 23 倍 [10]</span></div>
+  </div>
+  <div class="keybox">
+    <b>最反直觉的核心洞察：</b>这个品类<b>最大的"痛点"不在产品，而在需求真伪与利用率</b>。低频用户（一年露营 3–4 次）极易买后闲置吃灰——"智商税"争议的本质是<b>使用频率问题，不是产品缺陷</b> [13]。真正值回票价的是高频露营/自驾、摆摊生产、房车、应急人群。<b>这是评测综述通常抓不到的一层。</b>
+  </div>
+  <ul class="clean">
+    <li><b>格局</b>：中国主导的高增长赛道。<b>双雄</b>＝正浩 EcoFlow（快充/性能/技术）vs 华宝新能（国内"电小二"+海外"Jackery"，销量/品牌/轻便），份额随年份·地区·口径反复拉锯 [1][9]；Bluetti 主打容量性价比，<b>Anker 销量平平</b>，公牛/大疆/米家跨界。</li>
+    <li><b>产品侧真痛点</b>：噪音（散热风扇）· 重量（大容量物理必然）· <b>虚标</b>（低端普遍）· <b>选购信息污染</b>（京东好评率 100% 被用户质疑造假）[6][7]。</li>
+    <li><b>演化主线</b>：三元锂 → 磷酸铁锂（安全/循环 3000 次）→ 快充（→1 小时满）→ 模块化扩容+UPS+App。<b>轻量化是头号未被满足的痛点。</b></li>
+  </ul>
+</section>
+
+<!-- 0.5 数据基础 -->
+<section>
+  <h2><span class="n">0.5</span>数据基础与待验证清单 <span class="pill p-mid" style="margin-left:6px">前置·不藏附录</span></h2>
+  <div class="warn">
+    <b>⚠️ 用户声音严重受限（本报告最大局限）：</b>① 京东/天猫评价<b>好评造假</b>（用户公开吐槽"好评率 100% 太离谱"）且<b>反爬不可抓取</b> [7]；② 真实用户论坛被防火墙拦截 AI 抓取；③ 知乎推荐<b>多为带货软文</b>；④ 品类中国主导，<b>英文 Reddit 结果稀疏</b>。→ 痛点为<b>定性推断、无法给占比</b>，量化置信低；规模化国内用户画面需<b>手动导出电商差评</b>补采。
+  </div>
+  <table>
+    <tr><th style="width:120px">份额/归因</th><td>华宝与"电小二"被不同报告拆/合算，按地区（美亚/日亚/国内）·年份口径差异极大，多为<b>单源研报</b> → 竞争归因 <span class="pill p-low">置信中-低</span>，未做反事实</td></tr>
+    <tr><th>数据新鲜度</th><td>2025–2026，较新；但价格战中份额/价格<b>季度级易变</b></td></tr>
+    <tr><th>证据构成</th><td>知乎导购/避坑（多软文，警惕）· 券商研报 · 行业市场报告 · 英文 troubleshooting/社区 · 少量真实论坛（被拦）· <b>无规模化用户评论样本</b></td></tr>
+  </table>
+</section>
+
+<!-- 1 场景 -->
+<section>
+  <h2><span class="n">1</span>目标用户与使用场景（JTBD）</h2>
+  <table>
+    <thead><tr><th>用户群</th><th>场景</th><th>真实任务（JTBD）</th><th>深层目的</th></tr></thead>
+    <tbody>
+      <tr><td>精致露营家庭</td><td>营地</td><td>车载冰箱/投影/咖啡机/电热毯供电</td><td><b>把家的舒适搬到户外</b> + 社交展示（情感/社会 job）</td></tr>
+      <tr><td>自驾/房车玩家</td><td>长途·驻车</td><td>烧水做饭、驻车空调补电、冰箱持续</td><td>移动的家、摆脱补电焦虑</td></tr>
+      <tr><td>摆摊/直播/户外作业</td><td>谋生</td><td>照明、收款、补光、设备供电</td><td><b>生产资料</b>（高频刚需，常被低估）</td></tr>
+      <tr><td>应急备电家庭</td><td>停电/灾害</td><td>冰箱、医疗设备、手机、照明</td><td>安全感/保命（"有备无患"）</td></tr>
+      <tr><td>钓鱼/野餐轻度</td><td>短途</td><td>风扇 + 手机</td><td>舒适一点</td></tr>
+    </tbody>
+  </table>
+  <p>排序（频次×重要性）：<b>露营+自驾（增长主力，但情感驱动、利用率参差）＞ 摆摊/生产（高频刚需，被低估）＞ 应急备电（刚需但低频）＞ 钓鱼/办公</b>。</p>
+  <div class="keybox"><b>JTBD 关键：</b>多数消费级买家的真实任务是"露营时把家的用电体验搬出去 + 精致露营的社交展示"——<b>情感/社会 job 权重高，这恰恰埋下"低频闲置"的种子</b>；而摆摊/房车/应急是<b>功能刚需 job</b>，利用率高、最该被服务好。<span class="pill p-mid">置信中-高</span></div>
+</section>
+
+<!-- 2 用户声音/痛点 -->
+<section>
+  <h2><span class="n">2</span>用户声音、需求与痛点</h2>
+  <h3>2.1 用户声音层（定性，<span style="color:var(--neg)">无规模化占比</span>——见 0.5 局限）</h3>
+  <ul class="clean">
+    <li><b>最大争议 = 智商税/利用率</b>：低频用户"一年露营 3–4 次，实用性有限""买了吃灰""可用二手电池+逆变器几百块 DIY，成品却卖几千"；理性结论＝<b>低频不如租、高频/应急才值</b> [13]。这是本品类<b>最普遍、强度最高</b>的"痛点"，但属需求匹配、非产品缺陷。</li>
+    <li><b>产品痛点（差评/评测反复）</b>：噪音（塑料外壳散热差→风扇）、重量、<b>虚标</b>（容量/功率造假、大功率配小容量）、选购信息污染 [6][7]。</li>
+    <li><b>英文用户声音（Jackery 社区）</b>：风扇噪音（AC 充电/输入&gt;200W/高温触发；旧固件 bug 已修；新机型 App 静音模式）；<b>pass-through 边充边用</b>问题——厂商建议"别边充边用" [14]。</li>
+  </ul>
+  <div class="warn"><b>污染与背离提示：</b>国内电商好评率 100% 被用户当众质疑造假 [7]，知乎推荐多带货软文 [6]——<b>真实负面主要靠英文 troubleshooting [14] 和"智商税"辩论 [13] 捞出，而非电商评价</b>。这本身说明：该品类公开用户声音信任度低，是选购环节的真实痛点。</div>
+
+  <h3>2.2 痛点清单（相对强度，缺占比背书）</h3>
+  <div class="bars">
+    <div class="bar"><div class="lab"><span>使用频率低/买后闲置（智商税·需求匹配）</span><span>核心争议</span></div><div class="track"><div class="fill neg" style="width:100%"></div></div></div>
+    <div class="bar"><div class="lab"><span>虚标（容量/功率造假·低端重灾区）</span><span>基本型被欺骗</span></div><div class="track"><div class="fill neg" style="width:92%"></div></div></div>
+    <div class="bar"><div class="lab"><span>选购信息污染（好评造假/参数难懂）</span><span>决策焦虑</span></div><div class="track"><div class="fill neg" style="width:80%"></div></div></div>
+    <div class="bar"><div class="lab"><span>重量（大容量物理必然）</span><span>头号物理痛点</span></div><div class="track"><div class="fill neg" style="width:78%"></div></div></div>
+    <div class="bar"><div class="lab"><span>风扇噪音（充电/大功率触发）</span><span>中英都提</span></div><div class="track"><div class="fill neg" style="width:64%"></div></div></div>
+    <div class="bar"><div class="lab"><span>pass-through 边充边用伤电池/发热</span><span>英文用户</span></div><div class="track"><div class="fill neg" style="width:46%"></div></div></div>
+    <div class="bar"><div class="lab"><span>太阳能实际功率远低于标称</span><span>阴天焦虑</span></div><div class="track"><div class="fill neg" style="width:42%"></div></div></div>
+    <div class="bar"><div class="lab"><span>充电慢（老机型；快充旗舰已解决）</span><span>渐消退</span></div><div class="track"><div class="fill neg" style="width:30%"></div></div></div>
+  </div>
+  <div class="cap">条宽为<b>相对强度判断</b>，非用户占比——该品类用户声音不可规模化抓取（见 0.5）。来源 [6][7][13][14]。</div>
+  <div class="keybox"><b>结论：</b>"电量焦虑"解决得好（快充+大容量），但品类<b>头号问题是需求匹配（低频闲置）而非产品力</b>；产品侧真痛点集中在<b>重量、噪音、虚标、选购信任</b>——其中虚标+信任污染是<b>行业信誉级</b>问题，谁建立"不虚标+透明实测"心智谁得分。<span class="pill p-mid">方向中-高</span> <span class="pill p-low">占比低</span></div>
+</section>
+
+<!-- 3 卖点映射 -->
+<section>
+  <h2><span class="n">3</span>卖点 → 需求映射（价值主张）</h2>
+  <table>
+    <thead><tr><th>主流卖点</th><th>对应真实需求</th><th>是否对症</th></tr></thead>
+    <tbody>
+      <tr><td>大功率输出（2000W+）</td><td>带电饭煲/电磁炉/驻车空调</td><td class="ok">强对症（自驾/应急刚需）✓</td></tr>
+      <tr><td>磷酸铁锂 / 循环 3000 次 / 10 年</td><td>安全 + 耐用 + 摊薄成本</td><td class="ok">强对症，直接缓解智商税 ✓</td></tr>
+      <tr><td>1 小时快充 / 多路补电</td><td>补电焦虑</td><td class="ok">强对症 ✓</td></tr>
+      <tr><td>大容量（Wh）</td><td>电量焦虑、长时间供电</td><td class="mid">对症但推高重量/价格 ◐</td></tr>
+      <tr><td>模块化扩容</td><td>一步到位/未来加容量</td><td class="mid">对症（重度/成长用户）◐</td></tr>
+      <tr><td>App / IoT / UPS 秒切</td><td>智能、家庭备电</td><td class="no">露营轻度用户用不上，over-served ◐</td></tr>
+      <tr><td>太阳能兼容</td><td>离网自由</td><td class="mid">对症但实际功率打折，需管理期望 ◐</td></tr>
+    </tbody>
+  </table>
+  <p><b>错配诊断：</b><span class="no">Over-served</span>＝App 智能化对轻度用户堆料；<span class="ok">真空白（Under-served）</span>＝① <b>轻量化</b>（头号物理痛点无人突破）② <b>选购信任</b>（无品牌把"拒绝虚标+第三方实测"做成卖点）；<span class="no">欺骗性错配</span>＝杂牌虚标。</p>
+</section>
+
+<!-- 4 竞争 -->
+<section>
+  <h2><span class="n">4</span>竞争对比：为什么头部赢 / 谁掉队</h2>
+  <table>
+    <thead><tr><th>因素</th><th>正浩 EcoFlow</th><th>电小二 / Jackery（华宝）</th></tr></thead>
+    <tbody>
+      <tr><td>产品力/技术</td><td class="ok">快充、性能、迭代快（3600Wh+/1h）</td><td>均衡、轻便亲民</td></tr>
+      <tr><td>品牌心智</td><td>性能极客</td><td class="ok">露营场景绑定深、大众认知强</td></tr>
+      <tr><td>渠道</td><td>强</td><td class="ok">天猫/京东/抖音 618 品类第一</td></tr>
+      <tr><td>价格价值比</td><td>中高</td><td class="ok">亲民走量、覆盖广价格带</td></tr>
+    </tbody>
+  </table>
+  <p><b>多因素归因（禁止单一归因）：</b>EcoFlow 主导＝<b>产品力/技术 + 迭代速度</b>；华宝主导＝<b>品牌场景绑定 + 渠道下沉 + 轻便亲民</b>。两者不是同一打法取胜。</p>
+  <div class="keybox"><b>反直觉：Anker 为何平平？</b>手机配件时代的超强品牌，到户外电源却没赢 → <b>品类心智不迁移</b>（用户买户外电源认"露营/储能专业品牌"，不认"充电宝品牌"），且入场晚、缺场景绑定。印证了"品牌力有边界"。<span class="pill p-single">份额单源·口径多变</span> <span class="pill p-guess">归因中-低·未做反事实</span></div>
+</section>
+
+<!-- 5 trade-off -->
+<section>
+  <h2><span class="n">5</span>设计 trade-off（连环锁）</h2>
+  <div class="tos">
+    <div class="to"><div class="h">磷酸铁锂 LFP（vs 三元锂） <span class="pill p-high">事实</span></div>
+      <div class="row g">得：安全 + 循环 3000 次 + 长寿</div><div class="row l">舍：能量密度低 → 更重更大</div><div class="row s">服务安全/耐用/应急；牺牲极致轻便</div></div>
+    <div class="to"><div class="h">大容量</div>
+      <div class="row g">得：长续航 + 带大功率</div><div class="row l">舍：重量暴增 + 价格</div><div class="row s">自驾/应急；牺牲背包轻度</div></div>
+    <div class="to"><div class="h">大功率逆变</div>
+      <div class="row g">得：带电饭煲/驻车空调</div><div class="row l">舍：发热→风扇→噪音+体积</div><div class="row s">高功率场景；牺牲安静/轻</div></div>
+    <div class="to"><div class="h">高功率快充</div>
+      <div class="row g">得：1 小时满</div><div class="row l">舍：发热更凶→噪音+潜在损寿</div><div class="row s">补电焦虑者；牺牲安静/电池温和</div></div>
+    <div class="to"><div class="h">模块化扩容</div>
+      <div class="row g">得：灵活、未来扩容</div><div class="row l">舍：结构复杂+成本+接口</div><div class="row s">重度/成长用户；牺牲价格</div></div>
+    <div class="to"><div class="h">工程塑料外壳</div>
+      <div class="row g">得：轻 + 便宜</div><div class="row l">舍：散热差→更多风扇噪音</div><div class="row s">成本敏感；牺牲静音</div></div>
+  </div>
+  <div class="keybox"><b>核心：</b>重量 ↔ 容量 ↔ 安全(LFP) ↔ 功率 ↔ 噪音 ↔ 快充 ↔ 价格 是一组<b>连环锁</b>，按目标场景取平衡点。<b>取舍解释口碑分化：</b>主打便携轻量的对露营党是神器、对自驾应急党不够用；主打大容量大功率的对房车应急是刚需、对背包客是负担。好评差评＝<b>同一取舍在不同场景用户身上的两面</b>。<span class="pill p-high">置信高</span></div>
+</section>
+
+<!-- 6 演化 -->
+<section>
+  <h2><span class="n">6</span>产品演化</h2>
+  <div class="tl">
+    <div class="it"><div class="yr">早期</div><div class="ev">充电宝放大版 · 三元锂、小容量、噪音大、虚标乱</div><div class="why">品类萌芽</div></div>
+    <div class="it"><div class="yr">2020–2022</div><div class="ev">露营风口 · 容量/功率军备竞赛、群雄并起、+100% 增速</div><div class="why">精致露营场景爆发（需求侧驱动）</div></div>
+    <div class="it big"><div class="yr">2022–2025 · 真创新</div><div class="ev">磷酸铁锂普及 · 三元锂 → LFP（安全/循环 3000 次/寿命）</div><div class="why">回应安全焦虑 + 摊薄成本（缓解智商税）+ 电芯成熟</div></div>
+    <div class="it big"><div class="yr">快充时代 · 真创新</div><div class="ev">EcoFlow X-Stream 引领 · 数小时 → 1 小时满充、5C 电芯</div><div class="why">回应补电焦虑 + 竞争倒逼</div></div>
+    <div class="it"><div class="yr">2023–</div><div class="ev">模块化扩容 + UPS + App · 一机多用、家庭备电</div><div class="why">拓展场景 + 生态战略</div></div>
+    <div class="it"><div class="yr">2024–2025</div><div class="ev">出海爆发（4 年涨 23 倍）+ 价格战/内卷</div><div class="why">供应链/成本优势 + 玩家涌入</div></div>
+  </div>
+  <div class="keybox"><b>主线：</b>演化史 = 持续解除"户外电源＝又重又吵又不安全又充得慢"这组 trade-off 的历史——LFP 解安全、快充解补电、模块化解场景，<b>但重量这一环至今没被真正解除</b>，是下一步主战场。<span class="pill p-high">置信高</span></div>
+</section>
+
+<!-- 7 趋势 -->
+<section>
+  <h2><span class="n">7</span>未来趋势</h2>
+  <div class="tg">
+    <div class="tcol sure"><h4>✓ 确定趋势（有明确驱动）</h4>
+      <div class="ti"><b>磷酸铁锂成绝对标配</b><br>探索钠离子/更高循环，三元锂退场</div>
+      <div class="ti"><b>更快充 + 更高功率继续卷</b><br>1 小时满充成基准（1–2 年）</div>
+      <div class="ti"><b>模块化/一机多用</b><br>户外+家庭备电+阳台储能打通，品类边界模糊</div>
+      <div class="ti"><b>出海持续、国产主导全球</b><br>供应链+成本+迭代，集中度上升</div>
+      <div class="ti"><b>价格战 → 洗牌</b><br>杂牌/虚标出清（1–2 年）</div>
+      <div class="ti"><b>轻量化缓慢推进</b><br>头号未满足痛点，谁先突破谁赢</div>
+    </div>
+    <div class="tcol guess"><h4>≈ 猜想（低置信·纯外推）</h4>
+      <div class="ti"><b>半固态/固态电池上车</b><br>重量瓶颈松绑 → 同容量更轻更小，形态变化</div>
+      <div class="ti"><b>与家庭储能/车 V2L 深度融合</b><br>"户外电源"独立品类边界模糊</div>
+      <div class="ti"><b>AI 能量管理 / 租赁共享</b><br>租赁模式直接解决"低频闲置"核心痛点</div>
+    </div>
+  </div>
+</section>
+
+<!-- 附录 -->
+<section>
+  <h2><span class="n">A</span>证据与置信度自检</h2>
+  <ul class="clean">
+    <li><b>用户声音层严重受限</b>：国内电商好评造假 [7] + 反爬不可抓；真实论坛被 WAF 拦（识别 Claude-User）；知乎多导购软文；英文 Reddit 稀疏。→ 痛点为定性推断、无占比，方向中-高、量化低。<b>工具提示：</b>规模化国内用户声音需手动导出京东/天猫差评补采。</li>
+    <li><b>份额/归因</b>：华宝与电小二被不同报告拆/合算，按地区年份口径差异大，多单源研报 → 竞争归因中-低，未做反事实。</li>
+    <li><b>智商税洞察</b>来自知乎辩论 [13]（用户真实对立观点，非软文段落），方向可信但无占比。</li>
+    <li><b>市场规模</b>（2242 万台/636 亿/CAGR 51%）来自行业报告 [8]，未逐一交叉，按量级参考。</li>
+  </ul>
+</section>
+
+<section class="refs">
+  <h2><span class="n">📚</span>参考文献</h2>
+  <div>[1] 数英. 精致露营带火户外电源，正浩、电小二遭疯抢，安克销量平平. https://www.digitaling.com/articles/785140.html</div>
+  <div>[2] 证券时报网. 华宝新能：Jackery 电小二 618 户外电源品类销量销售额第一. https://www.stcn.com/article/detail/884448.html</div>
+  <div>[3] 知乎. 2025 年户外电源推荐（电小二/EcoFlow/大疆/绿联对比）. https://zhuanlan.zhihu.com/p/417133204</div>
+  <div>[5] 知乎. 露营、自驾、应急，户外电源怎么选（场景与参数）. https://zhuanlan.zhihu.com/p/2016983744498643716</div>
+  <div>[6] 知乎. 爆肝 3 天户外电源选型避坑指南（虚标/噪音/重）. https://zhuanlan.zhihu.com/p/635406782</div>
+  <div>[7] 数码之家. 户外电源好评都是 100% 太离谱（用户质疑好评造假）. https://www.mydigit.cn/thread-564634-1-1.html</div>
+  <div>[8] 智研咨询/大数跨境. 便携储能市场规模与出货（2242 万台/636 亿/CAGR 51%）. https://www.sdyanbao.com/detail/848655</div>
+  <div>[9] 东吴证券/华宝新能研究报告（份额变动：华宝 21%→EcoFlow 31–35%→华宝美亚 24% 回升）. https://zhuanlan.zhihu.com/p/584169723</div>
+  <div>[10] 阿里云创业. 4 年涨 23 倍，中国户外储能出海火了. https://startup.aliyun.com/info/1035659.html</div>
+  <div>[11] 新浪. 磷酸铁锂 2026 超越三元锂. https://www.sina.cn/news/detail/5264734661378445.html</div>
+  <div>[12] xudoodoo. 2026 户外电源锂电池：循环 3000 次/5C 快充. https://xudoodoo.com/Article-MjE4MA-39973.html</div>
+  <div>[13] 知乎. 户外电源是不是在交智商税？（闲置/DIY/租 vs 买 用户辩论）. https://www.zhihu.com/question/470398531</div>
+  <div>[14] Jackery Troubleshooting / exspenditure. 风扇噪音触发、pass-through 充电问题、静音模式. https://backuppowerhub.com/jackery-troubleshooting-guide/</div>
+  <div class="meta-note">consumer-electronics-user-needs skill 品类级产出。方向性结论置信中-高；用户声音占比与份额归因置信低（国内电商评论不可规模化抓取、份额口径多变）。2025–2026 数据，价格战中易过期。</div>
+</section>
+
+</div>
+</body>
+</html>

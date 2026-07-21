@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国扫地机器人</title><style>
+:root{--bg:#0f1419;--panel:#1a2129;--panel2:#212b35;--ink:#e6edf3;--muted:#9aa7b4;
+--line:#2d3a47;--accent:#4ea1ff;--green:#3fb950;--amber:#d29922;--red:#f85149;}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.7}
+.wrap{max-width:1040px;margin:0 auto;padding:44px 24px 80px}
+.kicker{color:var(--accent);font-weight:600;letter-spacing:.08em;font-size:13px;text-transform:uppercase}
+h1{font-size:28px;margin:8px 0 6px}.sub{color:var(--muted);font-size:15px}
+.meta{color:var(--muted);font-size:13px;margin-top:6px}
+h2{font-size:21px;margin:42px 0 10px}h2 .tag{display:inline-block;background:var(--accent);
+color:#04121f;font-size:13px;font-weight:700;padding:2px 9px;border-radius:6px;margin-right:10px;vertical-align:middle}
+.map{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.mnode{flex:1;min-width:170px;background:var(--panel2);border:1px solid var(--line);
+border-radius:10px;padding:12px}.mnode.vc{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
+.mnode.veto{opacity:.6}.mnode .pos{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.mnode b{display:block;margin:4px 0}.mnode small{color:var(--muted);font-size:12px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:#cdd9e5}td.score{text-align:center;font-weight:700;font-size:16px}
+.s5{background:rgba(63,185,80,.16);color:#6fdc82}.s4{background:rgba(63,185,80,.09);color:#8fd99c}
+.s3{background:rgba(210,153,34,.14);color:#e3b341}.s2{background:rgba(248,81,73,.15);color:#ff7b72}
+tr.demoted td{opacity:.78}.ok{color:var(--green);font-weight:700}.no{color:var(--red);font-weight:700}.mid{color:var(--muted)}
+details{background:var(--panel);border:1px solid var(--line);border-radius:8px;margin:8px 0;padding:6px 14px}
+summary{cursor:pointer;color:#cdd9e5;font-size:14px;font-weight:600}
+details ul{font-size:13.5px;color:var(--ink)}.src{color:var(--muted);font-size:12px}
+.conf{font-size:11px;padding:1px 7px;border-radius:20px;margin-right:4px}
+.conf.high{background:rgba(63,185,80,.2);color:#6fdc82}.conf.med{background:rgba(210,153,34,.2);color:#e3b341}
+.conf.low{background:rgba(248,81,73,.2);color:#ff7b72}
+.verdict{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.chip{background:rgba(63,185,80,.16);color:#6fdc82;border:1px solid var(--green);
+border-radius:20px;padding:6px 16px;font-weight:600}
+.role{font-size:12px;padding:2px 9px;border-radius:20px}
+.role.core{background:rgba(78,161,255,.2);color:#7cc0ff}.role.offense{background:rgba(210,153,34,.2);color:#e3b341}
+.role.satellite{background:rgba(154,167,180,.2);color:#cdd9e5}
+.tk{color:var(--muted);font-size:12px}
+.note{background:#1f2d3d;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:14px}
+.note .lbl{color:var(--accent);font-weight:700;font-size:12px;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
+.note.crit{background:#2a1719;border-left-color:var(--red)}.note.crit .lbl{color:var(--red)}
+.sources{font-size:13px;color:var(--muted)}.sources a{color:var(--accent);text-decoration:none}
+hr{border:0;border-top:1px solid var(--line);margin:34px 0}
+.foot{color:var(--muted);font-size:13px;margin-top:40px;text-align:center}
+</style></head><body><div class="wrap">
+
+<div class="kicker">产业链投资 · 评分卡</div>
+<h1>中国扫地机器人</h1>
+<div class="sub">从上游元器件（SoC、激光雷达/LDS、高速电机、电池）到品牌 + 导航软件 + 渠道触达消费者。中国品牌主导全球前五。</div>
+<div class="meta">原型: consumer-brand (hybrid with tech-hardware) &nbsp;|&nbsp; 数据截至 2026-06 &nbsp;|&nbsp; 透镜: smile-curve, pricing-power</div>
+<h2><span class="tag">S1</span>产业链地图 &amp; 价值量分布</h2>
+<div class="map">
+<div class="mnode"><div class="pos">上游</div><b>高速数字电机</b><small>吸力核心；少数有差异化的元器件之一</small></div>
+<div class="mnode veto"><div class="pos">上游</div><b>激光雷达 / LDS + 传感器</b><small>导航传感器</small></div>
+<div class="mnode veto"><div class="pos">上游</div><b>主控 SoC</b><small>多源采购的控制/AI SoC</small></div>
+<div class="mnode veto"><div class="pos">中游</div><b>ODM / 代工制造</b><small>纯组装，无面向消费者的护城河</small></div>
+<div class="mnode vc"><div class="pos">下游</div><b>品牌 + 导航软件 + 渠道</b><small>消费者为品牌 + 算法 + 全能基站付 3000+ 元，不是为谁造的电机付钱</small></div>
+</div>
+<h2><span class="tag">S2</span>四问评分卡</h2>
+<table><thead><tr><th>环节</th><th>Q1 规模/增速</th><th>Q2 竞争结构</th><th>Q3 利润池</th><th>Q4 话语权/护城河</th><th>结论</th></tr></thead><tbody>
+<tr><td><b>高速数字电机</b></td><td class="score s4">4</td><td class="score s3">3</td><td class="score s3">3</td><td class="score s3">3</td><td><span class="mid">—</span></td></tr>
+<tr class="demoted"><td><b>激光雷达 / LDS + 传感器</b></td><td class="score s4">4</td><td class="score s3">3</td><td class="score s3">3</td><td class="score s2">2</td><td><span class="no">短板否决</span></td></tr>
+<tr class="demoted"><td><b>主控 SoC</b></td><td class="score s4">4</td><td class="score s2">2</td><td class="score s3">3</td><td class="score s2">2</td><td><span class="no">短板否决</span></td></tr>
+<tr class="demoted"><td><b>ODM / 代工制造</b></td><td class="score s5">5</td><td class="score s3">3</td><td class="score s2">2</td><td class="score s2">2</td><td><span class="no">短板否决</span></td></tr>
+<tr><td><b>品牌 + 导航软件 + 渠道</b></td><td class="score s5">5</td><td class="score s3">3</td><td class="score s4">4</td><td class="score s5">5</td><td><span class="ok">价值捕获</span></td></tr>
+</tbody></table>
+<details><summary>高速数字电机 — 证据</summary>
+<ul><li><b>Q1 规模/增速 = 4</b> <span class="conf low">低</span> 随出货增长 <span class="src">industry</span></li><li><b>Q2 竞争结构 = 3</b> <span class="conf low">低</span> 德昌电机 + 国产；品牌越来越多自研（追觅自研） <span class="src">industry</span></li><li><b>Q3 利润池 = 3</b> <span class="conf low">低</span> 元器件毛利 <i>(当前: 中等 / 中周期: 中等)</i> <span class="src">industry</span></li><li><b>Q4 话语权/护城河 = 3</b> <span class="conf low">低</span> 有差异化但正被内化 <i>护城河: tech-generation</i> <i>侵蚀: 品牌自研内化，抽走供应商的定价权</i> <span class="src">industry</span></li></ul>
+<div class="note"><span class="lbl">方法笔记</span>临界：唯一有真实差异化的元器件，但品牌正把它拉进自研——价值归于品牌，而非独立电机供应商。</div>
+</details>
+<details><summary>激光雷达 / LDS + 传感器 — 证据</summary>
+<ul><li><b>Q1 规模/增速 = 4</b> <span class="conf med">中</span> 机器人激光雷达毛利高于车载（禾赛机器人业务毛利率 &gt;37%，拉动整体至 41.8%），但扫地机 LDS 属低端 <span class="src">新浪财经</span></li><li><b>Q2 竞争结构 = 3</b> <span class="conf med">中</span> 多家国产厂商靠降本求生 <span class="src">界面新闻</span></li><li><b>Q3 利润池 = 3</b> <span class="conf med">中</span> 国产激光雷达降本求生 <i>(当前: 分化，扫地机 LDS 商品化 / 中周期: 承压)</i> <span class="src">界面新闻</span></li><li><b>Q4 话语权/护城河 = 2</b> <span class="conf med">中</span> 扫地机级 LDS 是价格接受者 <i>护城河: scale</i> <i>侵蚀: 商品化、多源采购、品牌可切换</i> <span class="src">界面新闻</span></li></ul>
+</details>
+<details><summary>主控 SoC — 证据</summary>
+<ul><li><b>Q1 规模/增速 = 4</b> <span class="conf low">低</span> 随出货增长 <span class="src">腾讯新闻</span></li><li><b>Q2 竞争结构 = 2</b> <span class="conf med">中</span> 供应商众多：全志/瑞芯微/兆易 + ST/高通/NXP；偏商品化、多源 <span class="src">OFweek</span></li><li><b>Q3 利润池 = 3</b> <span class="conf low">低</span> 全志级 SoC <i>(当前: 通用 MCU/SoC 毛利 / 中周期: 竞争激烈)</i> <span class="src">OFweek</span></li><li><b>Q4 话语权/护城河 = 2</b> <span class="conf med">中</span> 可替代 <i>护城河: scale</i> <i>侵蚀: 无单源卡点，品牌可自由二次采购</i> <span class="src">OFweek</span></li></ul>
+</details>
+<details><summary>ODM / 代工制造 — 证据</summary>
+<ul><li><b>Q1 规模/增速 = 5</b> <span class="conf med">中</span> 出货量最大的环节 <span class="src">industry</span></li><li><b>Q2 竞争结构 = 3</b> <span class="conf low">低</span> 多家 ODM；科沃斯也为他人代工 <span class="src">industry</span></li><li><b>Q3 利润池 = 2</b> <span class="conf low">低</span> 代工制造的经济性 <i>(当前: 组装毛利微薄 / 中周期: 微薄)</i> <span class="src">industry</span></li><li><b>Q4 话语权/护城河 = 2</b> <span class="conf low">低</span> 相对品牌无定价权 <i>护城河: scale</i> <i>侵蚀: 可替代；被品牌方挤压</i> <span class="src">industry</span></li></ul>
+<div class="note"><span class="lbl">方法笔记</span>与光模块组装是同一物理位置、同样被否决——但这里价值流向下游品牌，而光模块里流向上游芯片。位置本身什么都说明不了；护城河才是关键。</div>
+</details>
+<details><summary>品牌 + 导航软件 + 渠道 — 证据</summary>
+<ul><li><b>Q1 规模/增速 = 5</b> <span class="conf high">高</span> 全球 2025 约 75 亿美元，CAGR 约 14%；中国渗透率仅约 4.5%，远低于美国 15% → 空间大；全球出货 20.6M(2024)→23.1M(2025) <span class="src">思瀚/IDC</span></li><li><b>Q2 竞争结构 = 3</b> <span class="conf med">中</span> 前五全是中国品牌，但份额洗牌快（石头升至第一，追觅反超科沃斯，大疆入局）；中国 CR5 约 89% 但充分竞争，非稳定寡头 <span class="src">智研/21jingji</span></li><li><b>Q3 利润池 = 4</b> <span class="conf high">高</span> 公司财报 <i>(当前: 毛利率高：石头约 50%（55%→50%→44.6% 25H1 下滑），科沃斯约 49% / 中周期: 毛利维持高位（品牌定价权）但净利率被挤压：石头 2025 净利同比 -31%，尽管收入 +55.85%；毛利线以下的利润被海外销售费用战打光)</i> <span class="src">36kr/腾讯新闻/cnfol</span></li><li><b>Q4 话语权/护城河 = 5</b> <span class="conf high">高</span> 定价权已验证：线上 ASP 3344 元同比 +9.4%，竞争由价格战转向技术战 <i>护城河: brand, software-algorithm, channel, patent</i> <i>侵蚀: 大疆跨界入局；若算法成熟则面临商品化</i> <span class="src">智研/qianzhan</span></li></ul>
+<div class="note"><span class="lbl">方法笔记</span>光模块的镜像：同样四问，价值落在下游品牌（Q4=5），而非上游元器件。品牌物理上就是『集成商/组装方』，却因掌握软件+品牌+渠道而捕获价值——所以微笑曲线『中间是苦活』只是科技硬件特有现象，不是定律。</div>
+</details>
+<h2><span class="tag">S3</span>价值捕获环节</h2>
+<div class="verdict"><span class="chip">品牌 + 导航软件 + 渠道</span></div>
+<h2><span class="tag">S5–S6</span>公司清单</h2>
+<table><thead><tr><th>公司</th><th>环节</th><th>角色</th><th>份额 / 毛利 / 增速</th><th>逻辑</th><th>买入纪律</th><th>风险</th></tr></thead><tbody>
+<tr><td><b>石头科技 (Roborock)</b> <span class="tk">688169</span></td><td>品牌 + 软件 + 渠道</td><td><span class="role core">核心</span></td><td>全球第一（25H1 约 20.7%） / 毛利率约 50% 但下滑；2025 净利 -31% / 2025 收入 +55.85%</td><td>软件/算法 + 海外领先（亚马逊德国站约占该品类一半）；该环节品牌护城河最强。</td><td>等净利率企稳——收入增长是用海外销售费用买来的。关注大疆入局。</td><td>• 增收不增利 / 营销战致净利率崩塌<br>• 毛利率侵蚀 55→44.6%<br>• 大疆跨界<br>• 可选消费的周期性</td></tr>
+<tr><td><b>科沃斯 (Ecovacs)</b> <span class="tk">603486</span></td><td>品牌 + 软件 + 渠道</td><td><span class="role core">核心</span></td><td>中国第一，全球第三（约 13.7%） / 毛利率约 49% / 2025 净利 +130%（复苏）</td><td>中国份额领先且利润复苏；添可洗地机为第二曲线；估值更便宜、盈利改善。</td><td>确认利润复苏可持续而非一次性；关注全球份额领先地位是否丢失。</td><td>• 丢掉全球第一<br>• 重度依赖营销<br>• 双品牌执行风险<br>• 品类周期性</td></tr>
+<tr><td><b>追觅 (Dreame)</b> <span class="tk">pre-IPO</span></td><td>品牌 + 软件 + 渠道</td><td><span class="role satellite">卫星</span></td><td>全球第二、增速最快（约 14.4%） / n/a（未上市） / 海外占收入 60%</td><td>增速最快的品牌，自研高速电机技术，650+ 美元高端定位，激进的多品类扩张。</td><td>暂不可直接投资——未上市。列入 IPO 观察；该环节动能最强。</td><td>• 未上市<br>• 多品类过度扩张<br>• 高端定位在规模化下未经验证</td></tr>
+</tbody></table>
+<div class="note crit"><span class="lbl">全链共担风险</span>可选消费品类——需求对宏观敏感；价格战复发 + 新进入者大疆 + 算法商品化，可能侵蚀品牌溢价，而品牌溢价是唯一的价值捕获环节。</div>
+<hr><div class="sources"><b>信息来源</b><ul>
+<li><a href="https://www.stcn.com/article/detail/3526737.html">中国/全球市场规模、渗透率、IDC 出货</a></li>
+<li><a href="http://www.chinasihan.com/news/cysj/4529.html">全球 2025 75 亿美元，CAGR 14% (思瀚)</a></li>
+<li><a href="https://36kr.com/p/3324820089940226">石头 vs 科沃斯 毛利、规模 vs 利润 (36kr)</a></li>
+<li><a href="http://news.cnfol.com/chanyejingji/20250925/31671363.shtml">石头 增收不增利，净利 -31% (cnfol)</a></li>
+<li><a href="https://news.qq.com/rain/a/20260228A05Q2Y00">石头 净利 -31%，科沃斯利润复苏 (腾讯)</a></li>
+<li><a href="https://www.21jingji.com/article/20260511/herald/4e095cda73dcf6181ad62738654e368f.html">全球份额：石头登顶，追觅反超科沃斯 (21jingji)</a></li>
+<li><a href="https://www.qianzhan.com/analyst/detail/329/250113-0e6d0d78.html">ASP +9.4%，价格战→技术战，具身智能 (qianzhan)</a></li>
+<li><a href="https://ee.ofweek.com/2024-01/ART-8470-2800-30621976.html">上游 SoC 供应商 全志/瑞芯微 (OFweek)</a></li>
+<li><a href="https://finance.sina.com.cn/roll/2026-04-14/doc-inhumfsq4325107.shtml">激光雷达商品化，机器人 vs 车载毛利 (新浪/界面)</a></li>
+<li><a href="https://www.stcn.com/article/detail/2997798.html">大疆跨界重塑品类 (stcn)</a></li>
+</ul></div>
+<div class="foot">value-chain-investing · 中国扫地机器人</div>
+</div></body></html>

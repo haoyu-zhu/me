@@ -2,22 +2,40 @@
 
 > 作者电影的故乡，镜头愿意慢下来，等一个人把话说完。
 
-法国、意大利、北欧……欧洲电影里的凝视与留白。
-
-<!-- 添加条目时复制以下模板：
-<div class="media-grid">
-  <article class="media-card">
-    <div class="media-cover">海报</div>
-    <div class="media-body">
-      <h3>片名</h3>
-      <div class="media-meta">导演 · 年份</div>
-      <div class="media-rating">★★★★★</div>
-      <p class="media-note">一句话感受。</p>
+<div class="best-list">
+  <article class="best-item">
+    <div class="best-year">美丽人生</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/europe/life-is-beautiful.webp" alt="美丽人生" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">坠落的审判</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/europe/anatomy-of-a-fall.webp" alt="坠落的审判" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">爱在黎明破晓前</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/europe/before-sunrise.webp" alt="爱在黎明破晓前" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">爱在日落黄昏时</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/europe/before-sunset.webp" alt="爱在日落黄昏时" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">爱在午夜降临前</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/europe/before-midnight.webp" alt="爱在午夜降临前" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
     </div>
   </article>
 </div>
--->
-
----
-
-*内容持续更新中……*

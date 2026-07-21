@@ -1,0 +1,139 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<title>两款经典 TWS · BOM 与售价拆解（产品经理视角）</title>
+<style>
+body{font-family:"Microsoft YaHei",Arial,sans-serif;max-width:1080px;margin:24px auto;color:#222;line-height:1.65;padding:0 16px}
+h1{border-bottom:3px solid #2c3e50;padding-bottom:8px}
+h2{margin-top:34px;background:#2c3e50;color:#fff;padding:6px 12px;border-radius:4px;font-size:19px}
+h3{color:#2c3e50;border-left:4px solid #2c3e50;padding-left:8px;margin-top:22px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#ecf0f1}
+.c{text-align:center}.r{text-align:right}
+.callout{background:#eef6ec;border-left:5px solid #27ae60;padding:10px 14px;margin:14px 0;border-radius:4px}
+.note{background:#fdf6e3;border-left:5px solid #d9a406;padding:10px 14px;margin:12px 0;border-radius:4px;font-size:13px}
+.tag{font-size:11px;border-radius:3px;padding:1px 6px;background:#eaecee;white-space:nowrap}
+sup a{font-size:11px;color:#2980b9;text-decoration:none}
+.two{display:flex;gap:16px;flex-wrap:wrap}
+.card{flex:1;min-width:300px;border:1px solid #e1e4e8;border-radius:8px;padding:14px}
+.card.apple{border-top:4px solid #333}
+.card.value{border-top:4px solid #16a085}
+.price{font-size:30px;font-weight:700}
+.sub{color:#888;font-size:13px}
+/* CSS 条形 */
+.barrow{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:13px}
+.barlab{width:150px;flex:none;text-align:right;color:#444}
+.bartrack{flex:1;background:#f0f2f4;border-radius:3px;height:20px;position:relative}
+.barfill{height:20px;border-radius:3px}
+.barval{width:110px;flex:none;color:#333;font-size:12px}
+.legend{font-size:12px;color:#666;margin:6px 0}
+.sw{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:3px;vertical-align:middle}
+.refs li{margin:4px 0;font-size:13px}
+</style></head><body>
+
+<h1>两款经典 TWS · BOM 与售价拆解</h1>
+<p class="sub">产品经理视角 · 生成 2026-07 · 数字均标来源与置信（拆解实测 / 研报估算 / 行业推断）· 单位 USD</p>
+
+<div class="callout">
+<b>一句话结论：</b>同样是 TWS，<b>AirPods Pro 2 卖 $249、白牌卖 $30，售价差 8 倍，物料（BOM）只差约 4.6 倍</b>。
+差出来的钱不在硬件里——高端把钱花在<b>自研芯片 + 软件生态 + 品牌</b>，BOM 只占售价 <b>21%</b>；
+白牌几乎是"裸卖硬件"，BOM 占售价 <b>38%</b>，剩下的被渠道和薄利吃掉。
+<b>做高端拼的是"换不掉的件"（自研 SoC 锁生态），做低端拼的是 BOM 控制和渠道效率。</b>
+</div>
+
+<div class="two">
+  <div class="card apple">
+    <div class="tag">高端标杆 · 垂直整合(芯片+软件)</div>
+    <h3 style="border:0;margin:6px 0">AirPods Pro 2（USB-C）</h3>
+    <div class="price">$249 <span class="sub">/ ¥1899</span></div>
+    <div class="sub">BOM ≈ <b>$53</b> · 占售价 <b>21%</b><sup><a href="#E1">[1]</a></sup></div>
+    <div class="sub">SoC：Apple 自研 H2（仅自用）</div>
+    <div class="sub">组装：立讯 / 歌尔</div>
+  </div>
+  <div class="card value">
+    <div class="tag">走量标杆 · 全外采+ODM</div>
+    <h3 style="border:0;margin:6px 0">中低端国产 TWS（QCY T13 / 红米 Buds 级）</h3>
+    <div class="price">$30 <span class="sub">/ ¥199</span></div>
+    <div class="sub">BOM/出厂 ≈ <b>$11.5</b> · 占售价 <b>38%</b><sup><a href="#E3">[3]</a></sup></div>
+    <div class="sub">SoC：杰理 / Realtek 公版（&lt;$1）<sup><a href="#E4">[4]</a></sup></div>
+    <div class="sub">整机：ODM 整包（佳禾 / 雷柏级）</div>
+  </div>
+</div>
+
+<h2>1. 售价 vs BOM —— 硬件只占售价一小块</h2>
+<p>把两款产品的售价拉平到同一视觉标尺（每 $ 等宽），看 BOM 那一截有多短：</p>
+
+<div class="legend"><span class="sw" style="background:#16a085"></span>BOM（物料+组装）　<span class="sw" style="background:#f0f2f4;border:1px solid #ccc"></span>售价其余部分（软件/品牌/渠道/研发/利润）</div>
+<div class="barrow"><div class="barlab">AirPods Pro 2</div>
+  <div class="bartrack"><div class="barfill" style="width:21%;background:#16a085"></div></div>
+  <div class="barval">$53 / $249（21%）</div></div>
+<div class="barrow"><div class="barlab">白牌 $30 档</div>
+  <div class="bartrack"><div class="barfill" style="width:38%;background:#16a085"></div></div>
+  <div class="barval">$11.5 / $30（38%）</div></div>
+
+<div class="note"><b>PM 读法：</b>越往高端走，BOM 占售价的比例<b>反而更低</b>——因为高端的溢价来自软件、生态、品牌，不是堆料。
+所以"高端产品 = 用更贵的料"是误区；真正拉开的是<b>自研芯片带来的软硬一体体验</b>和<b>生态锁定</b>。反过来，白牌 BOM 占比高、腾挪空间小，一分钱物料成本都是生死。</div>
+
+<h2>2. BOM 模块拆解 —— 钱花在哪几个件上</h2>
+<table>
+<tr><th>模块</th><th class="c">AirPods Pro 2<br><span class="sub">$53 · 100%</span></th><th class="c">白牌 $30 档<br><span class="sub">$11.5 · 100%</span></th><th>说明（PM 关注点）</th></tr>
+<tr><td><b>充电仓</b>（仓电芯/无线充/结构/MFi）</td><td class="c">$12 · 23%</td><td class="c">$3 · 26%</td><td>两款里都是最大单块。高端仓贵在无线充+MFi认证；这是可选配降配的第一刀</td></tr>
+<tr><td><b>主控 SoC</b></td><td class="c">$7 · 13%<sup><a href="#E2">[2]</a></sup></td><td class="c">$1 · 9%<sup><a href="#E4">[4]</a></sup></td><td>高端是自研 H2（成本口径含流片/摊销）；低端公版芯片已到 &lt;$1 地板价</td></tr>
+<tr><td><b>声学</b>（扬声器单元 + MEMS 麦克风）</td><td class="c">$8 · 15%</td><td class="c">$2.5 · 22%</td><td>高端 3 麦 ANC + 定制单元；低端动圈 + 单/双麦公模</td></tr>
+<tr><td><b>传感器 / PCB / FPC / 结构件</b></td><td class="c">$14 · 26%</td><td class="c">$1.5 · 13%</td><td>高端塞入光学/皮肤触感/入耳检测等一堆传感器，这块是体验分水岭</td></tr>
+<tr><td><b>电池</b>（耳塞电芯 ×2）</td><td class="c">$4 · 8%</td><td class="c">$2 · 17%</td><td>微型电芯，高端定制容量/安全，低端通用</td></tr>
+<tr><td><b>组装 + 测试</b></td><td class="c">$8 · 15%</td><td class="c">$1.5 · 13%</td><td>高端良率/认证要求高（立讯/歌尔）；低端 ODM 整包压到极限</td></tr>
+<tr style="font-weight:700;background:#f8f9fa"><td>BOM 合计</td><td class="c">$53</td><td class="c">$11.5</td><td>高端 BOM ≈ 低端 4.6×；但售价是 8.3×</td></tr>
+</table>
+<div class="note">BOM 明细为<b>估算</b>：AirPods Pro 整机 BOM 有 Counterpoint/TechInsights 公开总额（≈$51）与零星部件价（SiP 模块 $2.78、电池 $2.30）<sup><a href="#E1">[1]</a></sup><sup><a href="#E2">[2]</a></sup>，模块拆分按行业结构比例分配；白牌按 ODM 报价 $7.5–15/台<sup><a href="#E3">[3]</a></sup>与公版芯片 &lt;$1<sup><a href="#E4">[4]</a></sup>反推。绝对值会随型号/批量浮动，<b>结构比例比绝对数更可信</b>。</div>
+
+<h2>3. 售价成本结构 —— 剩下的钱谁拿走了</h2>
+<p>把整台售价（100%）拆成六块。BOM 之外的部分是<b>行业推断</b>（低置信），用来看"钱的去向结构"，不是精确账：</p>
+
+<h3>AirPods Pro 2 · $249</h3>
+<div class="barrow"><div class="barlab">BOM（物料+组装）</div><div class="bartrack"><div class="barfill" style="width:21%;background:#16a085"></div></div><div class="barval">$53 · 21%</div></div>
+<div class="barrow"><div class="barlab">研发摊销+软件生态</div><div class="bartrack"><div class="barfill" style="width:9%;background:#2980b9"></div></div><div class="barval">≈$22 · 9%</div></div>
+<div class="barrow"><div class="barlab">品牌 / 营销</div><div class="bartrack"><div class="barfill" style="width:10%;background:#8e44ad"></div></div><div class="barval">≈$25 · 10%</div></div>
+<div class="barrow"><div class="barlab">渠道 / 零售分成</div><div class="bartrack"><div class="barfill" style="width:16%;background:#e67e22"></div></div><div class="barval">≈$40 · 16%</div></div>
+<div class="barrow"><div class="barlab">品牌方毛利</div><div class="bartrack"><div class="barfill" style="width:44%;background:#c0392b"></div></div><div class="barval">≈$109 · 44%</div></div>
+
+<h3>白牌 $30 档</h3>
+<div class="barrow"><div class="barlab">BOM（物料+组装）</div><div class="bartrack"><div class="barfill" style="width:38%;background:#16a085"></div></div><div class="barval">$11.5 · 38%</div></div>
+<div class="barrow"><div class="barlab">研发+软件</div><div class="bartrack"><div class="barfill" style="width:5%;background:#2980b9"></div></div><div class="barval">≈$1.5 · 5%</div></div>
+<div class="barrow"><div class="barlab">品牌 / 营销</div><div class="bartrack"><div class="barfill" style="width:13%;background:#8e44ad"></div></div><div class="barval">≈$4 · 13%</div></div>
+<div class="barrow"><div class="barlab">渠道 / 电商佣金物流</div><div class="bartrack"><div class="barfill" style="width:30%;background:#e67e22"></div></div><div class="barval">≈$9 · 30%</div></div>
+<div class="barrow"><div class="barlab">品牌方毛利</div><div class="bartrack"><div class="barfill" style="width:13%;background:#c0392b"></div></div><div class="barval">≈$4 · 13%</div></div>
+
+<div class="note"><b>PM 读法：</b>高端的钱大头进了<b>品牌方毛利（44%）</b>和软件/生态，硬件只是入场券；白牌的钱大头被<b>渠道/电商佣金（30%）</b>吃掉，自己只剩 ~13% 薄利。
+这解释了为什么白牌拼命卷 BOM 和走量，而高端根本不靠省料——它靠的是<b>愿意为体验付溢价的用户</b>。</div>
+
+<h2>4. 供应链策略对比 —— 自研 vs 全外采</h2>
+<table>
+<tr><th>维度</th><th>AirPods Pro 2</th><th>白牌 $30 档</th></tr>
+<tr><td>主控 SoC</td><td><b>自研 H2</b>，软硬一体（空间音频/自适应ANC/无缝切换靠自研+软件）</td><td><b>全外采</b>公版（杰理/Realtek/中科蓝讯），拿来即用</td></tr>
+<tr><td>声学</td><td>定制单元，歌尔/瑞声深度联合开发</td><td>公模动圈，随处可采</td></tr>
+<tr><td>组装</td><td>立讯/歌尔，认证+良率深度绑定</td><td>ODM 整包，一张图纸多厂可产</td></tr>
+<tr><td>垂直整合在哪</td><td><b>芯片 + 软件 + 生态</b>（制造反而外包）</td><td>几乎为零，靠供应链成熟度</td></tr>
+<tr><td>护城河</td><td>换不掉的件 = 自研 SoC（锁 iOS 生态体验）</td><td>没有换不掉的件，全可竞价</td></tr>
+<tr><td>成本打法</td><td>不省料，省在规模采购+生态溢价</td><td>极限压 BOM + 渠道效率 + 走量摊薄</td></tr>
+</table>
+
+<h2>5. PM 采购 / 成本洞察（供应视角，非投资）</h2>
+<table>
+<tr><th>关注点</th><th>结论</th></tr>
+<tr><td><b>可砍成本的第一刀</b></td><td>高端：充电仓（$12，占 BOM 23%）——无线充/MFi 可做产品线分层降配。低端：SoC 已到 &lt;$1 地板，继续砍只能在声学公模/电芯/组装良率上抠</td></tr>
+<tr><td><b>哪些件"换不掉"</b></td><td>高端不是最贵的件卡脖，而是<b>自研 SoC（锁生态）</b>和<b>歌尔/立讯组装（认证良率深绑）</b>——这两处换供应商代价最大。低端全部可换、可竞价</td></tr>
+<tr><td><b>二供 / 议价空间</b></td><td>低端 SoC 有杰理/Realtek/中科蓝讯多家充分竞价，是天然可压价点；高端自研无断供风险，但强绑<b>台积电流片产能</b>需提前锁</td></tr>
+<tr><td><b>做新品的启示</b></td><td>若定位高端：钱要花在<b>自研/定制芯片 + 软件生态</b>，不是堆料；BOM 占售价压到 ~20% 是健康区间。若定位走量：<b>BOM 每省 $1 = 净利每台多 ~$1</b>，且渠道成本（电商佣金/退货）比 BOM 更值得优化</td></tr>
+</table>
+
+<h2>数据来源与置信</h2>
+<ol class="refs">
+<li id="E1">[1] <span class="tag">拆解估算</span><span class="tag">英</span> AirPods Pro 整机 BOM ≈ $51、零售 $249 —— Counterpoint Research《BoM Analysis for AirPods Pro》（约 2020，Pro 2 加 H2/ANC 升级后取 ≈$53）· 置信 中</li>
+<li id="E2">[2] <span class="tag">拆解实测</span><span class="tag">英</span> AirPods Pro SiP 模块 ≈ $2.78、电池 ≈ $2.30 等零星部件价 —— TechInsights / Electronics360 teardown · 置信 中（模块级拆分为按行业结构比例分配的估算）</li>
+<li id="E3">[3] <span class="tag">行业报价</span><span class="tag">英</span> 功能型 TWS ODM 出厂 $7.5–15/台（QCY 起 $7.5@1000MOQ）—— Alibaba Electronics 采购指南 2024–2026 · 置信 中</li>
+<li id="E4">[4] <span class="tag">研报估算</span><span class="tag">英/中</span> 白牌蓝牙音频芯片 &lt;$1（Realtek/杰理公版），红米 Airdots ¥99；蓝牙组件约占裸机成本 60% —— kr-asia / EqualOcean China TWS 综述 · 置信 中</li>
+<li id="E5">[5] <span class="tag">行业推断</span><span class="tag">—</span> 售价成本结构中 BOM 以外各块（研发/品牌/渠道/毛利）为行业典型比例推断，<b>低置信</b>，仅示意钱的去向结构，非精确账</li>
+</ol>
+<p class="sub">口径说明：BOM 含组装工时；"成本结构"的品牌方毛利 = 售价 − BOM − 制造 − 研发 − 品牌营销 − 渠道，属产品/财务视角，不等于上市公司整体毛利率。绝对值随型号/批量/汇率浮动，请以<b>结构比例</b>为准。</p>
+
+</body></html>

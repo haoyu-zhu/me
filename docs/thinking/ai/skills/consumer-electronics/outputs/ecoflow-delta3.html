@@ -1,0 +1,134 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<title>正浩 EcoFlow DELTA 3 Max（2kWh）· BOM 与产业链（产品经理视角）</title>
+<style>
+body{font-family:"Microsoft YaHei",Arial,sans-serif;max-width:1080px;margin:24px auto;color:#222;line-height:1.65;padding:0 16px}
+h1{border-bottom:3px solid #16607a;padding-bottom:8px}
+h2{margin-top:34px;background:#16607a;color:#fff;padding:6px 12px;border-radius:4px;font-size:19px}
+h3{color:#16607a;border-left:4px solid #16607a;padding-left:8px;margin-top:22px}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}
+th,td{border:1px solid #ddd;padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#eaf2f5}
+.c{text-align:center}.r{text-align:right}
+.callout{background:#eaf4f7;border-left:5px solid #16607a;padding:10px 14px;margin:14px 0;border-radius:4px}
+.note{background:#fdf6e3;border-left:5px solid #d9a406;padding:10px 14px;margin:12px 0;border-radius:4px;font-size:13px}
+.moat{background:#eef6ec;border-left:5px solid #27ae60;padding:10px 14px;margin:14px 0;border-radius:4px}
+.tag{font-size:11px;border-radius:3px;padding:1px 6px;background:#eaecee;white-space:nowrap}
+.cn{background:#e8f6ea;color:#1e7a34}.ov{background:#fdecea;color:#b0392b}
+sup a{font-size:11px;color:#2980b9;text-decoration:none}
+.price{font-size:30px;font-weight:700}
+.sub{color:#888;font-size:13px}
+.barrow{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:13px}
+.barlab{width:180px;flex:none;text-align:right;color:#444}
+.bartrack{flex:1;background:#f0f2f4;border-radius:3px;height:20px}
+.barfill{height:20px;border-radius:3px}
+.barval{width:130px;flex:none;color:#333;font-size:12px}
+.legend{font-size:12px;color:#666;margin:6px 0}
+.sw{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:3px;vertical-align:middle}
+.refs li{margin:4px 0;font-size:13px}
+</style></head><body>
+
+<h1>正浩 EcoFlow DELTA 3 Max（2kWh）· BOM 与产业链</h1>
+<p class="sub">产品经理视角 · 生成 2026-07 · 数字均标来源与置信（官方 / 拆解实测 / 研报估算 / 行业推断）· 单位 USD</p>
+
+<div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+  <div style="flex:1;min-width:260px">
+    <div class="tag">便携储能 · 2kWh 档 · 高端标杆</div>
+    <div class="price" style="margin-top:6px">$749 <span class="sub">/ ¥约 4999</span></div>
+    <div class="sub">2048Wh · 2400W 连续（4800W 峰值）· LFP · 68 分钟快充 · 20.3kg<sup><a href="#E1">[1]</a></sup></div>
+  </div>
+  <div style="flex:1;min-width:260px">
+    <div class="sub">BOM ≈ <b>$312</b> · 占售价 <b>~42%</b><sup><a href="#E5">[5]</a></sup></div>
+    <div class="sub">电芯：EVE / CATL / 鹏辉级多供<sup><a href="#E4">[4]</a></sup></div>
+    <div class="sub">功率电子：<b>自研主板</b>（华润微 + 纳芯微 + 兆易创新）<sup><a href="#E3">[3]</a></sup></div>
+  </div>
+</div>
+
+<div class="callout">
+<b>一句话结论：</b>便携储能是<b>"硬件重"生意</b>——BOM 占售价高达 <b>~42%</b>（对比 AirPods Pro 只 21%），
+其中<b>电芯一块就吃掉 BOM 的 ~40%</b>，谁都能买、成本随锂价周期波动。所以正浩的护城河<b>不在电芯</b>（外采、谁便宜买谁），
+而在<b>自研的双向逆变 + BMS 算法 + 68 分钟快充 + App 生态</b>——就像 AirPods 的护城河在自研 SoC。
+另一个亮点：<b>功率半导体已高度国产化</b>（主板功率管/驱动/MCU 都是国产），是储能功率链国产替代的活样本。
+</div>
+
+<h2>1. BOM 拆解 —— 电芯占 4 成，功率电子占 2 成</h2>
+<table>
+<tr><th>模块</th><th class="c">成本估算</th><th class="c">占 BOM</th><th>关键器件 / 供应</th><th>PM 关注点</th></tr>
+<tr><td><b>LFP 电芯</b>（2048Wh 电池包）</td><td class="c">~$125</td><td class="c"><b>40%</b></td><td>EVE / CATL / 鹏辉 / BYD 级<sup><a href="#E4">[4]</a></sup></td><td>最大成本块；$55–65/kWh（2024–25 低位）<sup><a href="#E2">[2]</a></sup>；多供充分可压价，但随锂价周期波动</td></tr>
+<tr><td><b>功率电子主板</b>（双向逆变 + MPPT + DC-DC）</td><td class="c">~$68</td><td class="c">22%</td><td>功率管<b>华润微</b>、驱动/隔离/采样<b>纳芯微</b>、MCU<b>兆易创新 GD32</b><sup><a href="#E3">[3]</a></sup></td><td>正浩<b>自研主板</b>；国产功率半导体主导，是护城河载体</td></tr>
+<tr><td><b>结构 / 外壳 / 散热 / 风扇</b></td><td class="c">~$34</td><td class="c">11%</td><td>金属+塑料结构、散热片、风扇</td><td>2kWh 机身重，结构散热是重量/安全关键</td></tr>
+<tr><td><b>线束 / 连接器 / 接口</b>（多路 AC 座 / USB-C PD / 车充 / XT）</td><td class="c">~$27</td><td class="c">9%</td><td>铜线束、大电流连接器、多制式插座</td><td>接口越多料越贵；铜价敏感</td></tr>
+<tr><td><b>组装 + 测试 + 老化</b></td><td class="c">~$28</td><td class="c">9%</td><td>整机自产为主</td><td>储能老化/安规测试工时长，比消费电子重</td></tr>
+<tr><td><b>BMS + 保护</b></td><td class="c">~$16</td><td class="c">5%</td><td>保护 IC <b>TI BQ7694202</b> + 均衡<sup><a href="#E3">[3]</a></sup>；算法自研</td><td>唯一还依赖海外的高端 IC；安全冗余替换谨慎</td></tr>
+<tr><td><b>显示 / 控制 / 无线</b>（LCD + MCU + WiFi/BT）</td><td class="c">~$14</td><td class="c">4%</td><td>LCD、无线模组</td><td>App/联网是体验差异点，料成本不高</td></tr>
+<tr style="font-weight:700;background:#f8f9fa"><td>BOM 合计</td><td class="c">~$312</td><td class="c">100%</td><td colspan="2">BOM / 售价 ≈ 42%</td></tr>
+</table>
+<div class="note">BOM 明细为<b>估算</b>：电芯用 2048Wh × 2024–25 LFP 电芯价（$55–65/kWh，BNEF/行业）<sup><a href="#E2">[2]</a></sup>反推；功率器件供应商来自 ChargerLab 对 DELTA 3 系列（1000 Air）的实拆<sup><a href="#E3">[3]</a></sup>，同平台推及 Max；模块金额按品类结构比例分配。<b>结构比例比绝对数更可信</b>。</div>
+
+<h2>2. 售价成本结构 —— 硬件重、渠道重，品牌溢价空间比消费电子小</h2>
+<p>把 $749 售价拆成六块（BOM 之外为行业推断，低置信，看钱的去向结构）：</p>
+<div class="legend"><span class="sw" style="background:#16a085"></span>BOM　<span class="sw" style="background:#2980b9"></span>研发/软件　<span class="sw" style="background:#8e44ad"></span>品牌营销　<span class="sw" style="background:#e67e22"></span>渠道　<span class="sw" style="background:#c0392b"></span>品牌方毛利</div>
+<div class="barrow"><div class="barlab">BOM（物料+组装）</div><div class="bartrack"><div class="barfill" style="width:42%;background:#16a085"></div></div><div class="barval">$312 · 42%</div></div>
+<div class="barrow"><div class="barlab">研发摊销+软件/固件</div><div class="bartrack"><div class="barfill" style="width:6%;background:#2980b9"></div></div><div class="barval">≈$45 · 6%</div></div>
+<div class="barrow"><div class="barlab">品牌 / 营销</div><div class="bartrack"><div class="barfill" style="width:12%;background:#8e44ad"></div></div><div class="barval">≈$90 · 12%</div></div>
+<div class="barrow"><div class="barlab">渠道 / 零售分成</div><div class="bartrack"><div class="barfill" style="width:18%;background:#e67e22"></div></div><div class="barval">≈$135 · 18%</div></div>
+<div class="barrow"><div class="barlab">品牌方毛利</div><div class="bartrack"><div class="barfill" style="width:22%;background:#c0392b"></div></div><div class="barval">≈$167 · 22%</div></div>
+
+<div class="note"><b>PM 读法：</b>和 AirPods Pro（BOM 仅 21%、品牌毛利 44%）正相反——便携储能<b>BOM 占比翻倍、品牌毛利腰斩</b>。原因：它是"电芯+电子"的硬通货，软件/生态溢价有限，渠道（亚马逊佣金/大件物流）还很重。
+<b>结论：这门生意谁能把电芯和功率电子的成本压得更低、谁就赢——降本能力 = 核心竞争力，和消费电子靠溢价是两种打法。</b></div>
+
+<h2>3. 上游产业链结构（只画层级，不列公司）</h2>
+<table>
+<tr><th>关键件</th><th>tier1 核心元件</th><th>tier2 关键材料</th><th>tier3 原材料</th></tr>
+<tr><td><b>LFP 电芯</b></td><td>电芯（正极/负极/隔膜/电解液）</td><td>磷酸铁锂正极料、石墨、隔膜、电解液</td><td>锂、铁、磷、石墨矿</td></tr>
+<tr><td><b>功率电子主板</b></td><td>功率 MOSFET / IGBT / 驱动 / MCU / 电感电容</td><td>晶圆（功率半导体）、磁性材料</td><td>硅片</td></tr>
+<tr><td><b>结构/散热</b></td><td>金属结构件、散热片、风扇</td><td>铝、工程塑料、铜</td><td>铝土/铜矿</td></tr>
+</table>
+
+<h2>4. 产业链厂商能力图谱（谁在做、特长、行业地位）</h2>
+
+<h3>LFP 电芯 <span class="tag">最大成本块</span></h3>
+<table>
+<tr><th>厂商</th><th>主营 / 特长</th><th>行业地位</th><th>对本产品适配</th></tr>
+<tr><td><b>宁德时代 CATL</b><br><span class="sub">300750</span></td><td>LFP 储能龙头，成本+品质+循环寿命标杆</td><td><span class="tag">全球储能电芯第一</span></td><td>高端电芯，品质背书</td></tr>
+<tr><td><b>亿纬锂能 EVE</b><br><span class="sub">300014</span></td><td>消费+储能 LFP 大厂，方形/圆柱全，供货灵活</td><td><span class="tag">储能电芯前三</span></td><td>便携储能主供之一</td></tr>
+<tr><td><b>鹏辉能源 Great Power</b><br><span class="sub">300438</span></td><td>储能/消费 LFP，性价比强</td><td><span class="tag">中端走量主力</span></td><td>便携储能常用，压成本</td></tr>
+<tr><td><b>比亚迪 BYD</b><br><span class="sub">002594</span></td><td>刀片 LFP，矿→电芯垂直一体，成本地板（~$44/kWh）<sup><a href="#E2">[2]</a></sup></td><td><span class="tag">成本最低梯队</span></td><td>极致成本方案</td></tr>
+</table>
+
+<h3>功率半导体（逆变/MPPT/BMS 主板）<span class="tag cn">国产替代活样本</span></h3>
+<table>
+<tr><th>厂商</th><th>主营 / 特长</th><th>行业地位</th><th>DELTA 3 里的角色<sup><a href="#E3">[3]</a></sup></th></tr>
+<tr><td><b>华润微 CR Micro</b><br><span class="sub">688396</span></td><td>功率 MOSFET / IGBT 国产主力，IDM 自有晶圆</td><td><span class="tag cn">国产功率器件龙头</span></td><td>主板保护/升压/LLC MOSFET + 逆变 IGBT</td></tr>
+<tr><td><b>纳芯微 NOVOSENSE</b><br><span class="sub">688052</span></td><td>隔离驱动 / 电流检测 / 隔离通信，国产模拟龙头</td><td><span class="tag cn">国产隔离/传感领先</span></td><td>栅极驱动 + 电流采样 + 隔离通信 IC</td></tr>
+<tr><td><b>兆易创新 GigaDevice</b><br><span class="sub">603986</span></td><td>GD32 MCU（ARM 内核），国产 MCU 龙头</td><td><span class="tag cn">国产 MCU 第一</span></td><td>GD32F303 双 MCU：系统 + 逆变控制</td></tr>
+<tr><td><b>德州仪器 TI</b><br><span class="sub">TXN</span></td><td>模拟 / 电源 / BMS 高端 IC</td><td><span class="tag ov">海外，高端仍主导</span></td><td>BMS 保护 IC（BQ7694202）</td></tr>
+<tr><td><b>英飞凌 Infineon</b><br><span class="sub">IFX</span></td><td>高端功率器件（MOSFET/IGBT/SiC）</td><td><span class="tag ov">海外高端备选</span></td><td>高端/大功率型号的备选源</td></tr>
+</table>
+
+<h3>逆变器 / 整机</h3>
+<p>正浩<b>自研双向逆变 + MPPT + BMS + 快充（X-Boost / X-Stream，68 分钟满充）+ App 联网</b>，整机自产为主。这部分<b>不外采</b>——是产品差异化与护城河所在。</p>
+
+<h2>5. 供应风险 & "换不掉的件"（PM 采购视角，非投资）</h2>
+<table>
+<tr><th>关注点</th><th>结论</th></tr>
+<tr><td><b>最大成本块能否压价</b></td><td>电芯占 BOM ~40%，但供应商多（CATL/EVE/鹏辉/BYD）<b>充分可竞价</b>，是首要压价点；建议锁长协对冲锂价周期（2024 崩、后续可能反弹）</td></tr>
+<tr><td><b>哪些件"换不掉"</b></td><td>不是最贵的电芯（谁都能买），而是<b>正浩自研的双向逆变 + BMS 算法 + 快充 + App 生态</b>——这是护城河，自研不外采。参考 AirPods 护城河在自研 SoC 而非最贵的件</td></tr>
+<tr><td><b>功率半导体供应</b></td><td><span class="tag cn">已高度国产化</span>：华润微/纳芯微/兆易创新主导主板 → 多供、议价强、<b>地缘风险低</b>。储能功率链国产替代跑通的样本</td></tr>
+<tr><td><b>仅存的海外依赖</b></td><td>BMS 高端保护 IC（TI）—— 可国产替代但涉电池安全冗余，替换需充分验证，短期保留双供</td></tr>
+<tr><td><b>做新品的启示</b></td><td>储能是<b>降本驱动</b>：电芯多供+锁价、功率电子继续国产化，是成本竞争力的两条主线；差异化则押注<b>自研电力电子 + 快充 + 软件</b>，不靠堆料</td></tr>
+</table>
+
+<div class="moat"><b>正浩打法 = 电芯外采（谁便宜买谁）+ 功率电子国产化（华润微/纳芯微/兆易创新）+ 核心电力电子与软件自研（逆变/BMS/快充/App）。</b>
+和白牌储能的区别，正是这套自研的功率电子与软件——白牌买公版方案整包，没有"换不掉的件"。</div>
+
+<h2>数据来源与置信</h2>
+<ol class="refs">
+<li id="E1">[1] <span class="tag">官方</span><span class="tag">英</span> DELTA 3 Max 2048Wh / 2400W（4800W 峰值）/ LFP 4000 循环 / 68 分钟快充 / 20.3kg / $749 —— EcoFlow US 官网 + 评测（backuppowerhub）· 置信 高</li>
+<li id="E2">[2] <span class="tag">研报</span><span class="tag">英</span> LFP 电芯 2024–25 跌至 $44–65/kWh（BYD ~$44）；BNEF 均价 pack $81/kWh（2024）、储能 pack $70/kWh（2025）—— BloombergNEF / 行业渠道价 · 置信 高</li>
+<li id="E3">[3] <span class="tag">拆解实测</span><span class="tag">英/中</span> DELTA 3（1000 Air）主板集成双向逆变+MPPT+BMS；功率 MOSFET/IGBT 来自华润微(CRMICRO)、栅驱/电流检测/隔离来自纳芯微(NOVOSENSE)、双 MCU 兆易创新 GD32F303、BMS 保护 TI BQ7694202 —— ChargerLab 拆解 · 置信 高（同平台推及 2kWh Max）</li>
+<li id="E4">[4] <span class="tag">行业</span><span class="tag">中/英</span> EcoFlow 采用 LFP 化学、多供电芯（EVE/CATL 等主流 LFP 厂）；具体型号批次供应商不同 —— 行业综述 · 置信 中</li>
+<li id="E5">[5] <span class="tag">行业推断</span><span class="tag">—</span> BOM 模块拆分与售价成本结构（研发/品牌/渠道/毛利）为品类典型比例推断，<b>低置信</b>，仅示意结构，非精确账</li>
+</ol>
+<p class="sub">口径：BOM 含组装；"成本结构"的品牌方毛利 = 售价 − 各成本块，属产品/财务视角，非上市公司整体毛利率。绝对值随型号/批量/锂价/汇率浮动，请以<b>结构比例</b>为准。产品指 DELTA 3 <b>Max</b>（2048Wh，$749）；DELTA 3 系列另有 1024Wh Classic 与 Max Plus（$1049，可扩容）。</p>
+
+</body></html>

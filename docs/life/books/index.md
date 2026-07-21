@@ -1,17 +1,64 @@
-# 书
+# 年度最佳书
 
-> 读书是一种安静的冒险。
+> 每年读完的书里，总有一两本会留下来，悄悄改变了看世界的角度。
 
-这里记录读过的书，以及读书时产生的想法。不一定是书评，更多是阅读留下的痕迹。按「一年一次的私人评选」和「文字的来处」分成几架书。
+不是这一年最流行的，而是对我个人影响最深的那几本。按年份倒序排列。
 
-<div class="mini-cards">
-  <a class="mini" href="best/"><b>年度最佳</b><span>每年留下来的那几本</span></a>
-  <a class="mini" href="china/"><b>中国</b><span>母语里的文字与故事</span></a>
-  <a class="mini" href="france/"><b>法国</b><span>浪漫、哲思与反叛</span></a>
-  <a class="mini" href="uk/"><b>英国</b><span>克制之中的深意</span></a>
-  <a class="mini" href="usa/"><b>美国</b><span>广袤大陆的众声</span></a>
+<div class="best-list">
+  <article class="best-item">
+    <div class="best-year">2025</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">📖</span><img src="../../assets/books/2025.jpg" alt="一地鸡毛" onerror="this.remove()"></div>
+      <div class="best-body"><h3>一地鸡毛</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2024</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">📖</span></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2023</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">📖</span></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2022</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">📖</span></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2021</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">📖</span><img src="../../assets/books/2021.jpg" alt="南渡北归" onerror="this.remove()"></div>
+      <div class="best-body"><h3>南渡北归</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2020</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">📖</span><img src="../../assets/books/2020.jpg" alt="霍乱时期的爱情" onerror="this.remove()"></div>
+      <div class="best-body"><h3>霍乱时期的爱情</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2019</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">📖</span><img src="../../assets/books/2019.jpg" alt="围城" onerror="this.remove()"></div>
+      <div class="best-body"><h3>围城</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">2018</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">📖</span><img src="../../assets/books/2018.jpg" alt="大秦帝国" onerror="this.remove()"></div>
+      <div class="best-body"><h3>大秦帝国</h3><p class="best-todo">……</p></div>
+    </div>
+  </article>
 </div>
-
----
-
-*从上方卡片或左侧目录进入。内容持续更新中……*

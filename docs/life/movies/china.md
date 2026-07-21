@@ -2,22 +2,26 @@
 
 > 华语世界的光影，讲的是我们最熟悉的那些人和事。
 
-大陆、香港、台湾——华语电影里的时代与人。
-
-<!-- 添加条目时复制以下模板：
-<div class="media-grid">
-  <article class="media-card">
-    <div class="media-cover">海报</div>
-    <div class="media-body">
-      <h3>片名</h3>
-      <div class="media-meta">导演 · 年份</div>
-      <div class="media-rating">★★★★★</div>
-      <p class="media-note">一句话感受。</p>
+<div class="best-list">
+  <article class="best-item">
+    <div class="best-year">喜宴</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/china/the-wedding-banquet.webp" alt="喜宴" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">无间道</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/china/infernal-affairs.webp" alt="无间道" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
+    </div>
+  </article>
+  <article class="best-item">
+    <div class="best-year">给阿嬷的情书</div>
+    <div class="best-main">
+      <div class="best-cover"><span class="best-cover-ph">🎬</span><img src="../../../assets/movies/china/gei-ama-de-qingshu.webp" alt="给阿嬷的情书" onerror="this.remove()"></div>
+      <div class="best-body"><p class="best-todo">……</p></div>
     </div>
   </article>
 </div>
--->
-
----
-
-*内容持续更新中……*
