@@ -413,3 +413,9 @@
   </aside>
   {% endif %}
 {% endblock %}
+
+{#-- Cloudflare Web Analytics（访问统计探针，全站每页注入）--#}
+{% block scripts %}
+  {{ super() }}
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a51bf3e1739248ffa92fecbac23d7e19"}'></script>
+{% endblock %}
